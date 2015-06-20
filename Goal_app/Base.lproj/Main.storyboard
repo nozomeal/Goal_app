@@ -7,7 +7,7 @@
         <!--Top Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" userLabel="Top Controller" customClass="ViewController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" userLabel="Top Controller" customClass="TopController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -58,8 +58,7 @@
         <!--Today Controller 1-->
         <scene sceneID="Adg-mf-FyC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Xws-N4-1p1" userLabel="Today Controller 1" sceneMemberID="viewController">
+                <viewController id="Xws-N4-1p1" userLabel="Today Controller 1" customClass="TodayController1" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OQz-hn-v0d"/>
                         <viewControllerLayoutGuide type="bottom" id="fah-NI-qWZ"/>
@@ -100,13 +99,14 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3009.5" y="1599.5"/>
         </scene>
         <!--Change Controller-->
         <scene sceneID="erX-UR-yGm">
             <objects>
-                <viewController id="Krh-xw-8Pb" userLabel="Change Controller" sceneMemberID="viewController">
+                <viewController id="Krh-xw-8Pb" userLabel="Change Controller" customClass="ChangeController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X76-oX-Vhs"/>
                         <viewControllerLayoutGuide type="bottom" id="spg-wA-qNZ"/>
@@ -171,7 +171,7 @@
         <!--Not Clear Controller-->
         <scene sceneID="j6z-p7-qeU">
             <objects>
-                <viewController id="mYL-Cj-t5k" userLabel="Not Clear Controller" sceneMemberID="viewController">
+                <viewController id="mYL-Cj-t5k" userLabel="Not Clear Controller" customClass="NotClearController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wDC-gs-sKi"/>
                         <viewControllerLayoutGuide type="bottom" id="Gp2-wJ-4mX"/>
@@ -205,7 +205,7 @@
         <!--Clear Controller-->
         <scene sceneID="aQj-ZY-ogB">
             <objects>
-                <viewController id="Nxz-9d-zxw" userLabel="Clear Controller" sceneMemberID="viewController">
+                <viewController id="Nxz-9d-zxw" userLabel="Clear Controller" customClass="ClearController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vh2-0j-XCc"/>
                         <viewControllerLayoutGuide type="bottom" id="rdG-bU-IAA"/>
@@ -236,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="1601.5" y="2874.5"/>
         </scene>
-        <!--Plan Controller 2-->
+        <!--Plan Controller -->
         <scene sceneID="hb6-DQ-CrT">
             <objects>
-                <viewController id="TmB-T4-KJc" userLabel="Plan Controller 2" sceneMemberID="viewController">
+                <viewController id="TmB-T4-KJc" userLabel="Plan Controller " customClass="PlanController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SyW-js-VhB"/>
                         <viewControllerLayoutGuide type="bottom" id="5lg-IE-GTi"/>
@@ -280,18 +280,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-uK-l7F">
-                                <rect key="frame" x="10" y="388" width="320" height="142"/>
-                                <date key="date" timeIntervalSinceReferenceDate="456391853.77502698">
-                                    <!--2015-06-19 07:30:53 +0000-->
-                                </date>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvM-6l-9lu">
                                 <rect key="frame" x="23" y="532" width="100" height="100"/>
                                 <state key="normal" image="OK_botton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-j4-aLg" userLabel="Data">
+                                <rect key="frame" x="73" y="387" width="129" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="DataPicker1" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-uK-l7F" userLabel="DatePicker1">
+                                <rect key="frame" x="73" y="412" width="253" height="136"/>
+                                <date key="date" timeIntervalSinceReferenceDate="456391853.77502698">
+                                    <!--2015-06-19 07:30:53 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
+                                    <!--2015-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="3155626800">
+                                    <!--2100-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -299,12 +311,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ki-y4-0ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724.5" y="306.5"/>
+            <point key="canvasLocation" x="1728.5" y="600.5"/>
         </scene>
         <!--Today Controller 2-->
         <scene sceneID="TIp-Re-8Ww">
             <objects>
-                <viewController id="yaW-wo-zCa" userLabel="Today Controller 2" sceneMemberID="viewController">
+                <viewController id="yaW-wo-zCa" userLabel="Today Controller 2" customClass="TodayController2" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FAj-Tl-x9r"/>
                         <viewControllerLayoutGuide type="bottom" id="O7o-tE-eV5"/>
@@ -381,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tdg-TG-3MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2393.5" y="306.5"/>
+            <point key="canvasLocation" x="2393.5" y="600.5"/>
         </scene>
     </scenes>
     <resources>
@@ -406,7 +418,7 @@
         <image name="yajirusi.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kfm-PE-OQ3"/>
-        <segue reference="RmY-Gg-peB"/>
+        <segue reference="l15-qo-bdH"/>
+        <segue reference="S2K-nO-0gd"/>
     </inferredMetricsTieBreakers>
 </document>
