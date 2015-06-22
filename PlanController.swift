@@ -56,16 +56,16 @@ class PlanController: UIViewController, UITextFieldDelegate {
     
     
     // saveボタンのアクション
-     //func OK(sender: AnyObject) {
         // データ保存処理
         // NSUserDefaultsインスタンスの生成
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
         // キー: "saveText" , 値: "" を格納。（idは任意）
         userDefaults.setObject(number.text, forKey: "savenumber")
-        //userDefaults.setObject(Tanni.text, forKey: "saveTanni")
+        userDefaults.setObject(Tanni.text, forKey: "saveTanni")
+        userDefaults.setObject(dataPicker1.datePickerMode, forkey: "saveData")
 
-       // }
+
     }
 
 }
