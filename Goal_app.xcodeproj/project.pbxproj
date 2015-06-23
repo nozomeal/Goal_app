@@ -47,7 +47,10 @@
 		23537F1B1B34172600099A37 /* Clear!.png in Resources */ = {isa = PBXBuildFile; fileRef = 23537F1A1B34172600099A37 /* Clear!.png */; };
 		23537F1D1B34174A00099A37 /* not_clear1.png in Resources */ = {isa = PBXBuildFile; fileRef = 23537F1C1B34174A00099A37 /* not_clear1.png */; };
 		23537F1F1B34184C00099A37 /* TOP_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 23537F1E1B34184C00099A37 /* TOP_up.png */; };
-		237F9EA61B35A07E00992965 /* PlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237F9EA51B35A07E00992965 /* PlanController.swift */; };
+		237F9EA61B35A07E00992965 /* PlanController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237F9EA51B35A07E00992965 /* PlanController2.swift */; };
+		23C9CA0D1B38FDC5006BD465 /* PlanController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C9CA0C1B38FDC5006BD465 /* PlanController1.swift */; };
+		23C9CA0F1B390A56006BD465 /* Mkuhyou_set.png in Resources */ = {isa = PBXBuildFile; fileRef = 23C9CA0E1B390A56006BD465 /* Mkuhyou_set.png */; };
+		23C9CA131B394235006BD465 /* tebiki.png in Resources */ = {isa = PBXBuildFile; fileRef = 23C9CA121B394235006BD465 /* tebiki.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +108,10 @@
 		23537F1A1B34172600099A37 /* Clear!.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clear!.png"; sourceTree = "<group>"; };
 		23537F1C1B34174A00099A37 /* not_clear1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_clear1.png; sourceTree = "<group>"; };
 		23537F1E1B34184C00099A37 /* TOP_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOP_up.png; sourceTree = "<group>"; };
-		237F9EA51B35A07E00992965 /* PlanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanController.swift; path = ../PlanController.swift; sourceTree = "<group>"; };
+		237F9EA51B35A07E00992965 /* PlanController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanController2.swift; path = ../PlanController2.swift; sourceTree = "<group>"; };
+		23C9CA0C1B38FDC5006BD465 /* PlanController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanController1.swift; sourceTree = "<group>"; };
+		23C9CA0E1B390A56006BD465 /* Mkuhyou_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mkuhyou_set.png; sourceTree = "<group>"; };
+		23C9CA121B394235006BD465 /* tebiki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tebiki.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,8 @@
 		23537EBF1B312E2600099A37 /* Goal_app */ = {
 			isa = PBXGroup;
 			children = (
+				23C9CA121B394235006BD465 /* tebiki.png */,
+				23C9CA0E1B390A56006BD465 /* Mkuhyou_set.png */,
 				23537F1E1B34184C00099A37 /* TOP_up.png */,
 				23537F1C1B34174A00099A37 /* not_clear1.png */,
 				23537F1A1B34172600099A37 /* Clear!.png */,
@@ -176,9 +184,10 @@
 				23537EE41B32B17800099A37 /* PLAN.png */,
 				23537EE21B32AED600099A37 /* first_top.png */,
 				23537EC61B312E2600099A37 /* Main.storyboard */,
+				23C9CA0C1B38FDC5006BD465 /* PlanController1.swift */,
 				23537EC21B312E2600099A37 /* AppDelegate.swift */,
 				23537EC41B312E2600099A37 /* ViewController.swift */,
-				237F9EA51B35A07E00992965 /* PlanController.swift */,
+				237F9EA51B35A07E00992965 /* PlanController2.swift */,
 				230EFD921B351EC200618D16 /* TodayController2.swift */,
 				230EFD8E1B34EFC600618D16 /* ClearController.swift */,
 				230EFD8C1B34EF8D00618D16 /* NotClearController.swift */,
@@ -299,6 +308,7 @@
 			files = (
 				23537EF71B32C37C00099A37 /* tanni.png in Resources */,
 				23537F091B33D26000099A37 /* PLAN_back1.png in Resources */,
+				23C9CA131B394235006BD465 /* tebiki.png in Resources */,
 				23537EFF1B32C98600099A37 /* mokuhyoumade.png in Resources */,
 				23537EFB1B32C75F00099A37 /* today_nyuuyroku.png in Resources */,
 				23537F151B3409B300099A37 /* TODAY_back1.png in Resources */,
@@ -328,6 +338,7 @@
 				23537EE51B32B17800099A37 /* PLAN.png in Resources */,
 				23537EE31B32AED600099A37 /* first_top.png in Resources */,
 				23537ECA1B312E2600099A37 /* Images.xcassets in Resources */,
+				23C9CA0F1B390A56006BD465 /* Mkuhyou_set.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,11 +357,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				230EFD8F1B34EFC600618D16 /* ClearController.swift in Sources */,
-				237F9EA61B35A07E00992965 /* PlanController.swift in Sources */,
+				237F9EA61B35A07E00992965 /* PlanController2.swift in Sources */,
 				230EFD871B34EE1A00618D16 /* TopController.swift in Sources */,
 				23537EC51B312E2600099A37 /* ViewController.swift in Sources */,
 				23537EC31B312E2600099A37 /* AppDelegate.swift in Sources */,
 				230EFD931B351EC200618D16 /* TodayController2.swift in Sources */,
+				23C9CA0D1B38FDC5006BD465 /* PlanController1.swift in Sources */,
 				230EFD8D1B34EF8D00618D16 /* NotClearController.swift in Sources */,
 				230EFD8B1B34EF3500618D16 /* ChangeController.swift in Sources */,
 				230EFD891B34EEB900618D16 /* TodayController1.swift in Sources */,

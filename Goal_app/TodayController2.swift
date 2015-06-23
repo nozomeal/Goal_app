@@ -21,12 +21,14 @@ class TodayController2: UIViewController {
         // Dispose of any resources that can be recreated.
     }
    
-    // Dailyのアウトレット
+    // 1日あたりのアウトレット
     @IBOutlet weak var Daily: UILabel!
-    // Tanni_1のアウトレット
+    // 単位１のアウトレット
     @IBOutlet weak var Tanni_1: UILabel!
-    // Tanni_2のアウトレット
+    // 単位２のアウトレット
     @IBOutlet weak var Tanni_2: UILabel!
+    //目標到達のアウトレット
+    @IBOutlet weak var Toutatu: UILabel!
    
     
     // loadボタンのアクション
@@ -47,9 +49,25 @@ class TodayController2: UIViewController {
         Daily.text = loadText1
         Tanni_1.text = loadText2
         Tanni_2.text = loadText3
-        
-        
-    }
 
     
-}
+        var Mokuhyou  :Int = 0
+        var Kyou :Int = 0
+        //到達までの計算を表示
+        var x2 = Mokuhyou.text.toInt(number)!
+        var x1 = Kyou.text.toInt(Today_number)!
+        
+        var y = x1 - x2
+        
+        Toutatu.text = String(y)
+        
+    }
+    }
+    
+
+
+    
+    
+    
+    
+

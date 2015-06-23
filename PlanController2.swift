@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlanController: UIViewController, UITextFieldDelegate {
+class PlanController2: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet var data: UILabel!
@@ -35,8 +35,9 @@ class PlanController: UIViewController, UITextFieldDelegate {
     //numberのアウトレット
     @IBOutlet weak var number: UITextField!
     
-    
+    //Tanniのアウトレット
     @IBOutlet weak var Tanni: UITextField!
+    
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -52,7 +53,7 @@ class PlanController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func OK(sender: AnyObject) {
+    @IBAction func OK1(sender: AnyObject) {
     
     
     // saveボタンのアクション
@@ -63,8 +64,7 @@ class PlanController: UIViewController, UITextFieldDelegate {
         // キー: "saveText" , 値: "" を格納。（idは任意）
         userDefaults.setObject(number.text, forKey: "savenumber")
         userDefaults.setObject(Tanni.text, forKey: "saveTanni")
-        userDefaults.setObject(dataPicker1.datePickerMode, forkey: "saveData")
-
+        userDefaults.setObject(data.text, forKey: "saveData")
 
     }
 

@@ -43,7 +43,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TmB-T4-KJc" kind="show" id="Shx-fe-tyf"/>
+                                    <segue destination="i0q-pP-gcJ" kind="show" id="0Zg-1x-zws"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,35 +73,48 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="today_nyuuyroku.png" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-Dw-Dic">
                                 <rect key="frame" x="16" y="77" width="221" height="176"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usi-ET-b9M">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usi-ET-b9M" userLabel="Today_number">
                                 <rect key="frame" x="68" y="252" width="101" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="単位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEH-oo-f3Y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="単位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEH-oo-f3Y" userLabel="Tanni_3">
                                 <rect key="frame" x="169" y="268" width="59" height="56"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-te-zQL">
-                                <rect key="frame" x="265" y="511" width="81" height="73"/>
-                                <state key="normal" title="next" backgroundImage="yajirusi.png">
-                                    <color key="titleColor" red="1" green="0.50383661589999995" blue="0.27940459709999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-2M-qMM">
+                                <rect key="frame" x="249" y="348" width="30" height="30"/>
+                                <state key="normal" title="load">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yaW-wo-zCa" kind="show" id="RmY-Gg-peB"/>
+                                    <action selector="load:" destination="Xws-N4-1p1" eventType="touchUpInside" id="NIe-wq-CKi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r3-Vw-qxX" userLabel="OK2">
+                                <rect key="frame" x="244" y="496" width="115" height="100"/>
+                                <state key="normal" image="OK_botton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OK2:" destination="Xws-N4-1p1" eventType="touchUpInside" id="7bT-ee-tDz"/>
+                                    <segue destination="yaW-wo-zCa" kind="show" id="nCt-u7-v0e"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Tanni_3" destination="SEH-oo-f3Y" id="ILG-be-buL"/>
+                        <outlet property="Today_number" destination="usi-ET-b9M" id="4GK-Wq-flQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3009.5" y="1599.5"/>
+            <point key="canvasLocation" x="2761.5" y="1383.5"/>
         </scene>
         <!--Change Controller-->
         <scene sceneID="erX-UR-yGm">
@@ -236,10 +249,58 @@
             </objects>
             <point key="canvasLocation" x="1601.5" y="2874.5"/>
         </scene>
-        <!--Plan Controller -->
+        <!--Plan Controller1-->
+        <scene sceneID="JTg-5g-YDr">
+            <objects>
+                <viewController id="i0q-pP-gcJ" customClass="PlanController1" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DhP-qB-T0d"/>
+                        <viewControllerLayoutGuide type="bottom" id="FdP-mr-zWL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Il2-d6-cK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PLAN_back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-Pu-xXB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQa-Hx-nFM" userLabel="OK3">
+                                <rect key="frame" x="259" y="528" width="100" height="100"/>
+                                <state key="normal" image="OK_botton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OK3:" destination="i0q-pP-gcJ" eventType="touchUpInside" id="eJm-iQ-Cfy"/>
+                                    <segue destination="TmB-T4-KJc" kind="show" id="25J-O0-8bw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mkuhyou_set.png" translatesAutoresizingMaskIntoConstraints="NO" id="0y9-T7-VYd">
+                                <rect key="frame" x="16" y="77" width="238" height="189"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9mu-EH-Sjl" userLabel="Settei">
+                                <rect key="frame" x="34" y="236" width="242" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tebiki.png" translatesAutoresizingMaskIntoConstraints="NO" id="SlY-ea-JNv">
+                                <rect key="frame" x="54" y="330" width="238" height="167"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Settei" destination="9mu-EH-Sjl" id="d9Z-Rh-ZyV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sM3-WL-FP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757.5" y="491.5"/>
+        </scene>
+        <!--Plan Controller2-->
         <scene sceneID="hb6-DQ-CrT">
             <objects>
-                <viewController id="TmB-T4-KJc" userLabel="Plan Controller " customClass="PlanController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TmB-T4-KJc" customClass="PlanController2" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SyW-js-VhB"/>
                         <viewControllerLayoutGuide type="bottom" id="5lg-IE-GTi"/>
@@ -260,17 +321,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kijitu.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vvx-JU-APD">
                                 <rect key="frame" x="-14" y="305" width="191" height="149"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imc-zx-EtP">
-                                <rect key="frame" x="248" y="532" width="100" height="100"/>
-                                <state key="normal" title="next" backgroundImage="yajirusi.png">
-                                    <color key="titleColor" red="1" green="0.50383661589807616" blue="0.27940459706804222" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="yaW-wo-zCa" kind="show" id="S2K-nO-0gd"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="number" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doN-W3-Hzl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doN-W3-Hzl" userLabel="number">
                                 <rect key="frame" x="73" y="147" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -280,15 +331,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvM-6l-9lu" userLabel="OK">
-                                <rect key="frame" x="23" y="532" width="100" height="100"/>
-                                <state key="normal" image="OK_botton.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="OK:" destination="TmB-T4-KJc" eventType="touchUpInside" id="hy3-rj-tV5"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-j4-aLg" userLabel="Data">
                                 <rect key="frame" x="73" y="379" width="210" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -310,20 +352,30 @@
                                     <action selector="changed:" destination="TmB-T4-KJc" eventType="valueChanged" id="AGp-Un-anu"/>
                                 </connections>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvM-6l-9lu" userLabel=" OK1">
+                                <rect key="frame" x="259" y="533" width="100" height="100"/>
+                                <state key="normal" image="OK_botton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OK1:" destination="TmB-T4-KJc" eventType="touchUpInside" id="whC-Mc-3Wu"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="lla-qr-Ncn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Tanni" destination="14H-tU-Xca" id="nln-N5-t5C"/>
-                        <outlet property="data" destination="Dea-j4-aLg" id="zjN-7R-EFI"/>
+                        <outlet property="data" destination="Dea-j4-aLg" id="4Ak-P8-XZh"/>
                         <outlet property="dataPicker1" destination="x0z-uK-l7F" id="wo4-E8-hpS"/>
                         <outlet property="number" destination="doN-W3-Hzl" id="9Cg-ck-ob7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ki-y4-0ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728.5" y="600.5"/>
+            <point key="canvasLocation" x="2336.5" y="491.5"/>
         </scene>
         <!--Today Controller 2-->
         <scene sceneID="TIp-Re-8Ww">
@@ -358,7 +410,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokuhyoutoutatu.png" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-r9-jT9">
                                 <rect key="frame" x="16" y="170" width="178" height="131"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJo-FX-q38">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJo-FX-q38" userLabel="Toutatu">
                                 <rect key="frame" x="43" y="238" width="192" height="138"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -367,7 +419,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ato.png" translatesAutoresizingMaskIntoConstraints="NO" id="OA1-8e-Ekq">
                                 <rect key="frame" x="0.0" y="367" width="167" height="120"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfm-sl-OOQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfm-sl-OOQ" userLabel="Nokori">
                                 <rect key="frame" x="86" y="400" width="106" height="87"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -379,9 +431,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hiniti.png" translatesAutoresizingMaskIntoConstraints="NO" id="OSc-vn-wgs">
-                                <rect key="frame" x="133" y="425" width="128" height="87"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy7-Rb-8UB">
                                 <rect key="frame" x="257" y="513" width="92" height="71"/>
                                 <state key="normal" title="top" backgroundImage="yajirusi.png">
@@ -407,6 +456,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hiniti.png" translatesAutoresizingMaskIntoConstraints="NO" id="OSc-vn-wgs">
+                                <rect key="frame" x="133" y="418" width="128" height="87"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -415,17 +467,19 @@
                         <outlet property="Daily" destination="to6-WZ-GsO" id="eSB-SU-47h"/>
                         <outlet property="Tanni_1" destination="Ls3-3o-nmM" id="4di-5Z-jBB"/>
                         <outlet property="Tanni_2" destination="HJ0-cM-pPE" id="1Gn-Os-iTM"/>
+                        <outlet property="Tuotatu" destination="EJo-FX-q38" id="ljJ-wA-cOX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tdg-TG-3MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392.5" y="600.5"/>
+            <point key="canvasLocation" x="3528.5" y="1400.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="1day_.png" width="400" height="300"/>
         <image name="CHANGE_back1.png" width="1242" height="2208"/>
         <image name="Clear!.png" width="1242" height="2208"/>
+        <image name="Mkuhyou_set.png" width="400" height="300"/>
         <image name="OK_botton.png" width="100" height="100"/>
         <image name="PLAN.png" width="300" height="150"/>
         <image name="PLAN_back1.png" width="1242" height="2208"/>
@@ -440,11 +494,11 @@
         <image name="not_clear1.png" width="1242" height="2208"/>
         <image name="suuti.png" width="400" height="300"/>
         <image name="tanni.png" width="400" height="300"/>
+        <image name="tebiki.png" width="400" height="300"/>
         <image name="today_nyuuyroku.png" width="400" height="300"/>
         <image name="yajirusi.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="l15-qo-bdH"/>
-        <segue reference="S2K-nO-0gd"/>
     </inferredMetricsTieBreakers>
 </document>
