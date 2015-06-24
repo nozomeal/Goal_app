@@ -11,6 +11,9 @@ import UIKit
 
 class TodayController1: UIViewController {
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,7 @@ class TodayController1: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     //numberのアウトレット
     @IBOutlet weak var Today_number: UITextField!
     
@@ -37,14 +41,14 @@ class TodayController1: UIViewController {
         
         // キー: "saveText" , 値: "" を格納。（idは任意）
         userDefaults.setObject(Today_number.text, forKey: "saveToday_number")
-        
-        
     }
-    
+
+    @IBAction func load1(sender: AnyObject) {
+
     // Tanni_3のアウトレット
-    @IBOutlet weak var Tanni_3: UILabel!
+     weak var Tanni_3: UILabel!
     // loadボタンのアクション
-    @IBAction func load(sender: AnyObject) {
+     //func load1(sender: AnyObject) {
         // データ読み込み処理
         
         // NSUserDefaultsインスタンスの生成
@@ -58,5 +62,5 @@ class TodayController1: UIViewController {
         
         Tanni_3.text = loadText4
 
-    }
+}
 }

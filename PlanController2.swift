@@ -67,7 +67,6 @@ class PlanController2: UIViewController, UITextFieldDelegate {
         userDefaults.setObject(data.text, forKey: "saveData")
 
     }
-
 }
 
 

@@ -11,6 +11,7 @@ import UIKit
 
 class TodayController2: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -50,16 +51,6 @@ class TodayController2: UIViewController {
         Tanni_1.text = loadText2
         Tanni_2.text = loadText3
 
-    
-        var Mokuhyou  :Int = 0
-        var Kyou :Int = 0
-        //到達までの計算を表示
-        var x2 = Mokuhyou.text.toInt(number)!
-        var x1 = Kyou.text.toInt(Today_number)!
-        
-        var y = x1 - x2
-        
-        Toutatu.text = String(y)
         
     }
     }

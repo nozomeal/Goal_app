@@ -19,31 +19,31 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="first_top.png" translatesAutoresizingMaskIntoConstraints="NO" id="CD9-tx-csC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiq-OG-dcS">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiq-OG-dcS" userLabel="Today">
                                 <rect key="frame" x="21" y="411" width="160" height="83"/>
                                 <state key="normal" image="TODAY.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Xws-N4-1p1" kind="show" id="C3U-zM-ZC7"/>
+                                    <segue destination="Xws-N4-1p1" kind="show" id="Dp1-gb-7aq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ha8-rc-Kdj">
-                                <rect key="frame" x="68" y="490" width="134" height="108"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ha8-rc-Kdj" userLabel="Change">
+                                <rect key="frame" x="68" y="502" width="134" height="96"/>
                                 <state key="normal" image="change.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Krh-xw-8Pb" kind="show" id="KHQ-fl-Dr6"/>
+                                    <segue destination="Krh-xw-8Pb" kind="show" id="83l-I8-pUQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-7S-5xj">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-7S-5xj" userLabel="Plan">
                                 <rect key="frame" x="0.0" y="329" width="174" height="86"/>
                                 <state key="normal" image="PLAN.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="i0q-pP-gcJ" kind="show" id="0Zg-1x-zws"/>
+                                    <segue destination="i0q-pP-gcJ" kind="show" id="B7N-DC-XPg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,13 +84,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-2M-qMM">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-2M-qMM" userLabel="load1">
                                 <rect key="frame" x="249" y="348" width="30" height="30"/>
                                 <state key="normal" title="load">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="load:" destination="Xws-N4-1p1" eventType="touchUpInside" id="NIe-wq-CKi"/>
+                                    <action selector="load1:" destination="Xws-N4-1p1" eventType="touchUpInside" id="YSc-li-N36"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r3-Vw-qxX" userLabel="OK2">
@@ -99,8 +99,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="OK2:" destination="Xws-N4-1p1" eventType="touchUpInside" id="7bT-ee-tDz"/>
-                                    <segue destination="yaW-wo-zCa" kind="show" id="nCt-u7-v0e"/>
+                                    <action selector="OK2:" destination="Xws-N4-1p1" eventType="touchUpInside" id="mkB-zC-a5h"/>
+                                    <segue destination="yaW-wo-zCa" kind="show" id="R5Z-kd-q1f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,13 +108,14 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Tanni_3" destination="SEH-oo-f3Y" id="ILG-be-buL"/>
+                        <outlet property="Tanni_3" destination="SEH-oo-f3Y" id="C0J-44-KjO"/>
                         <outlet property="Today_number" destination="usi-ET-b9M" id="4GK-Wq-flQ"/>
+                        <outlet property="load1" destination="V9z-2M-qMM" id="nmO-7w-5Fa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2761.5" y="1383.5"/>
+            <point key="canvasLocation" x="2715.5" y="1393.5"/>
         </scene>
         <!--Change Controller-->
         <scene sceneID="erX-UR-yGm">
@@ -359,7 +360,7 @@
                                 </state>
                                 <connections>
                                     <action selector="OK1:" destination="TmB-T4-KJc" eventType="touchUpInside" id="whC-Mc-3Wu"/>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="lla-qr-Ncn"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="9Od-ic-0ZY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -499,6 +500,6 @@
         <image name="yajirusi.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l15-qo-bdH"/>
+        <segue reference="9Od-ic-0ZY"/>
     </inferredMetricsTieBreakers>
 </document>
