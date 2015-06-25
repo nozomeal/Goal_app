@@ -42,29 +42,30 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         //AppDelegateのインスタンスを取得
         var number = appDelegate.number
-        var Today_number = appDelegate.Today_number
+        var todaynumber = appDelegate.todaynumber
+    
         
+        var x1: Int = number!.toInt()!
+        var x2: Int? = todaynumber!.toInt()!
         
+        var y: Int = 0
         
-        var toutatu :Int = 0
-        
-        if(number < Today_number){
+        if(x1 < x2){
             // 目標数値＜現在の数値
-            toutatu = Today_number! - number!
-            Toutatu.text = String(toutatu)
-        }else if(number > Today_number){
+            y = x2! - x1
+            //Toutatu.text = String(y)
+        }else if(x1 > x2){
             //　目標数値＞現在の数値
-            toutatu = number! - Today_number!
-            Toutatu.text = String(toutatu)
+            y = x1 - x2!
+            //Toutatu.text = String(y)
         }
-        
+        Toutatu.text = String(y)
         
         
         // データ読み込み処理
         // NSUserDefaultsインスタンスの生成
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-    
         // キーが"saveTanni"のStringをとります。
         var loadText2 : String! = userDefaults.stringForKey("saveTanni")
         // キーが"saveTanni"のStringをとります。
@@ -76,8 +77,8 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
 
         
     }
-    }
-    
+}
+
 
 
     

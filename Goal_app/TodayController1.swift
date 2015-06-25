@@ -24,8 +24,8 @@ class TodayController1: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //numberのアウトレット
-    @IBOutlet weak var Today_number: UITextField!
+    //TodayNumberのアウトレット
+    @IBOutlet weak var todaynumber: UILabel!
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -35,17 +35,13 @@ class TodayController1: UIViewController {
         
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         //AppDelegateのインスタンスを取得
-        appDelegate.Today_number = Today_number
-        //appDelegateの変数を操作
-        
+        appDelegate.todaynumber = "todaynumber"
         
         // saveボタンのアクション
         // データ保存処理
         // NSUserDefaultsインスタンスの生成
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        // キー: "saveText" , 値: "" を格納。（idは任意）
-        //userDefaults.setObject(Today_number.text, forKey: "saveToday_number")
     }
 
     // Tanni_3のアウトレット
@@ -62,7 +58,6 @@ class TodayController1: UIViewController {
         
         
         // labelに表示
-        
         Tanni_3.text = loadText4
 
 }

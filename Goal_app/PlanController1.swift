@@ -36,7 +36,7 @@ class PlanController1: UIViewController {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
         // キー: "saveText" , 値: "" を格納。（idは任意）
-        userDefaults.setObject(Settei.text, forKey: "savenSettei")
+        userDefaults.setObject(Settei.text, forKey: "saveSettei")
     }
     
     

@@ -61,7 +61,7 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         //AppDelegateのインスタンスを取得
-        appDelegate.number = number
+        appDelegate.number = "number"
         //appDelegateの変数を操作
     
     // saveボタンのアクション
