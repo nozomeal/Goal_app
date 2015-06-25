@@ -33,6 +33,11 @@ class TodayController1: UIViewController {
     }
     @IBAction func OK2(sender: AnyObject) {
         
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        //AppDelegateのインスタンスを取得
+        appDelegate.Today_number = Today_number
+        //appDelegateの変数を操作
+        
         
         // saveボタンのアクション
         // データ保存処理
@@ -40,15 +45,13 @@ class TodayController1: UIViewController {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
         // キー: "saveText" , 値: "" を格納。（idは任意）
-        userDefaults.setObject(Today_number.text, forKey: "saveToday_number")
+        //userDefaults.setObject(Today_number.text, forKey: "saveToday_number")
     }
 
+    // Tanni_3のアウトレット
+    @IBOutlet weak var Tanni_3: UILabel!
     @IBAction func load1(sender: AnyObject) {
 
-    // Tanni_3のアウトレット
-     weak var Tanni_3: UILabel!
-    // loadボタンのアクション
-     //func load1(sender: AnyObject) {
         // データ読み込み処理
         
         // NSUserDefaultsインスタンスの生成

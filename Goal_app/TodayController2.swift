@@ -9,19 +9,10 @@
 import Foundation
 import UIKit
 
-class TodayController2: UIViewController {
+class TodayController2: UIViewController ,UIApplicationDelegate  {
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-   
     // 1日あたりのアウトレット
     @IBOutlet weak var Daily: UILabel!
     // 単位１のアウトレット
@@ -30,24 +21,56 @@ class TodayController2: UIViewController {
     @IBOutlet weak var Tanni_2: UILabel!
     //目標到達のアウトレット
     @IBOutlet weak var Toutatu: UILabel!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
    
+    
     
     // loadボタンのアクション
     @IBAction func load(sender: AnyObject) {
-        // データ読み込み処理
         
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        //AppDelegateのインスタンスを取得
+        var number = appDelegate.number
+        var Today_number = appDelegate.Today_number
+        
+        
+        
+        var toutatu :Int = 0
+        
+        if(number < Today_number){
+            // 目標数値＜現在の数値
+            toutatu = Today_number! - number!
+            Toutatu.text = String(toutatu)
+        }else if(number > Today_number){
+            //　目標数値＞現在の数値
+            toutatu = number! - Today_number!
+            Toutatu.text = String(toutatu)
+        }
+        
+        
+        
+        // データ読み込み処理
         // NSUserDefaultsインスタンスの生成
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        // キーが"saveTnumber"のStringをとります。
-        var loadText1 : String! = userDefaults.stringForKey("savenumber")
+    
         // キーが"saveTanni"のStringをとります。
         var loadText2 : String! = userDefaults.stringForKey("saveTanni")
         // キーが"saveTanni"のStringをとります。
         var loadText3 : String! = userDefaults.stringForKey("saveTanni")
         
         // labelに表示
-        Daily.text = loadText1
         Tanni_1.text = loadText2
         Tanni_2.text = loadText3
 

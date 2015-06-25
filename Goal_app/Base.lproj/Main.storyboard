@@ -25,7 +25,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Xws-N4-1p1" kind="show" id="Dp1-gb-7aq"/>
+                                    <segue destination="Xws-N4-1p1" kind="show" id="NTn-Zg-b9N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ha8-rc-Kdj" userLabel="Change">
@@ -34,7 +34,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Krh-xw-8Pb" kind="show" id="83l-I8-pUQ"/>
+                                    <segue destination="Krh-xw-8Pb" kind="show" id="ZJt-fa-KpG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-7S-5xj" userLabel="Plan">
@@ -43,7 +43,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="i0q-pP-gcJ" kind="show" id="B7N-DC-XPg"/>
+                                    <segue destination="i0q-pP-gcJ" kind="show" id="cDs-q1-F3n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -100,7 +100,7 @@
                                 </state>
                                 <connections>
                                     <action selector="OK2:" destination="Xws-N4-1p1" eventType="touchUpInside" id="mkB-zC-a5h"/>
-                                    <segue destination="yaW-wo-zCa" kind="show" id="R5Z-kd-q1f"/>
+                                    <segue destination="yaW-wo-zCa" kind="show" id="Cg8-Ax-26g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,7 +110,6 @@
                     <connections>
                         <outlet property="Tanni_3" destination="SEH-oo-f3Y" id="C0J-44-KjO"/>
                         <outlet property="Today_number" destination="usi-ET-b9M" id="4GK-Wq-flQ"/>
-                        <outlet property="load1" destination="V9z-2M-qMM" id="nmO-7w-5Fa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,7 +147,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="nor-Kr-jzR"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="qW1-GZ-3WH"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cvE-gh-gFh">
@@ -203,9 +202,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="Kfm-PE-OQ3"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -237,9 +233,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="rjf-1z-HNL"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -360,7 +353,7 @@
                                 </state>
                                 <connections>
                                     <action selector="OK1:" destination="TmB-T4-KJc" eventType="touchUpInside" id="whC-Mc-3Wu"/>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="9Od-ic-0ZY"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="Aa1-K1-hv4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -432,23 +425,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy7-Rb-8UB">
-                                <rect key="frame" x="257" y="513" width="92" height="71"/>
-                                <state key="normal" title="top" backgroundImage="yajirusi.png">
-                                    <color key="titleColor" red="1" green="0.50383661589999995" blue="0.27940459709999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="l15-qo-bdH"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-d4-MFh">
                                 <rect key="frame" x="189" y="28" width="30" height="30"/>
                                 <state key="normal" title="load">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="load:" destination="yaW-wo-zCa" eventType="touchUpInside" id="r8F-L5-a6K"/>
+                                    <action selector="load:" destination="yaW-wo-zCa" eventType="touchUpInside" id="GDd-yy-ndv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tanni_2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ0-cM-pPE" userLabel="Tanni_2">
@@ -460,15 +443,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hiniti.png" translatesAutoresizingMaskIntoConstraints="NO" id="OSc-vn-wgs">
                                 <rect key="frame" x="133" y="418" width="128" height="87"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JS-mA-lp7" userLabel="OK">
+                                <rect key="frame" x="245" y="495" width="100" height="100"/>
+                                <state key="normal" image="OK_botton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="rOq-km-k4c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Daily" destination="to6-WZ-GsO" id="eSB-SU-47h"/>
                         <outlet property="Tanni_1" destination="Ls3-3o-nmM" id="4di-5Z-jBB"/>
                         <outlet property="Tanni_2" destination="HJ0-cM-pPE" id="1Gn-Os-iTM"/>
-                        <outlet property="Tuotatu" destination="EJo-FX-q38" id="ljJ-wA-cOX"/>
+                        <outlet property="Toutatu" destination="EJo-FX-q38" id="37R-Bb-xwP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tdg-TG-3MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -500,6 +491,6 @@
         <image name="yajirusi.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Od-ic-0ZY"/>
+        <segue reference="rOq-km-k4c"/>
     </inferredMetricsTieBreakers>
 </document>
