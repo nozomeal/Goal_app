@@ -12,8 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var number:String?
-    var todaynumber:String?
+    var numberStr:String?
+    var todayNumberStr:String?
+    var date:String?
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

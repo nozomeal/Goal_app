@@ -25,7 +25,7 @@ class TodayController1: UIViewController {
     }
     
     //TodayNumberのアウトレット
-    @IBOutlet weak var todaynumber: UILabel!
+    @IBOutlet weak var todayNumberStr: UILabel!
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -35,7 +35,7 @@ class TodayController1: UIViewController {
         
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         //AppDelegateのインスタンスを取得
-        appDelegate.todaynumber = "todaynumber"
+        appDelegate.todayNumberStr = "todayNumberStr"
         
         // saveボタンのアクション
         // データ保存処理

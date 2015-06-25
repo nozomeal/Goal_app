@@ -13,12 +13,18 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
 
     
     //日付のアウトレット
-    @IBOutlet var data: UILabel!
+    @IBOutlet var date: UILabel!
     //pickerviewのアウトレット
-    @IBOutlet var dataPicker1: UIDatePicker!
+    @IBOutlet var datePicker1: UIDatePicker!
     
     @IBAction func changed(sender: UIDatePicker) {
-        data.text = format(dataPicker1.date,style: "yyyy年,MM月dd日")
+        date.text = format(datePicker1.date,style: "yyyy年,MM月dd日")
+        
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        //AppDelegateのインスタンスを取得
+        appDelegate.date = "date"
+        //appDelegateの変数を操作
+        
     }
     
     // 書式指定に従って日付を文字列に変換します
@@ -33,10 +39,13 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         dateFormatter.dateFormat = style
         return  dateFormatter.stringFromDate(date)
     }
+    
+    
+    
     private var myTextField: UITextField!
     
     //number（textfield)のアウトレット
-    @IBOutlet weak var number: UITextField!
+    @IBOutlet weak var numberStr: UITextField!
     //Tanni(textfield)のアウトレット
     @IBOutlet weak var Tanni: UITextField!
     
@@ -61,7 +70,7 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         //AppDelegateのインスタンスを取得
-        appDelegate.number = "number"
+        appDelegate.numberStr = "numberStr"
         //appDelegateの変数を操作
     
     // saveボタンのアクション
@@ -72,7 +81,6 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
 
         
         // キー: "saveText" , 値: "" を格納。（idは任意）
-        // userDefaults.setObject(number.text, forKey: "savenumber")
         userDefaults.setObject(Tanni.text, forKey: "saveTanni")
         userDefaults.setObject(data.text, forKey: "saveData")
 
