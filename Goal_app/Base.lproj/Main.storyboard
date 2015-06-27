@@ -84,15 +84,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-2M-qMM" userLabel="load1">
-                                <rect key="frame" x="249" y="348" width="30" height="30"/>
-                                <state key="normal" title="load">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="load1:" destination="Xws-N4-1p1" eventType="touchUpInside" id="YSc-li-N36"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r3-Vw-qxX" userLabel="OK2">
                                 <rect key="frame" x="244" y="496" width="115" height="100"/>
                                 <state key="normal" image="OK_botton.png">
@@ -101,6 +92,17 @@
                                 <connections>
                                     <action selector="OK2:" destination="Xws-N4-1p1" eventType="touchUpInside" id="mkB-zC-a5h"/>
                                     <segue destination="yaW-wo-zCa" kind="show" id="Cg8-Ax-26g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-2M-qMM" userLabel="load1">
+                                <rect key="frame" x="24" y="34" width="61" height="35"/>
+                                <color key="backgroundColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="push!">
+                                    <color key="titleColor" red="0.99082623110000001" green="0.99082623110000001" blue="0.99082623110000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="load1:" destination="Xws-N4-1p1" eventType="touchUpInside" id="YSc-li-N36"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,11 +139,37 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="cIM-kw-L2j"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul4-jY-Eiu" userLabel="notclear">
+                                <rect key="frame" x="16" y="135" width="343" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="を達成できませんでした。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dny-4T-ROZ">
+                                <rect key="frame" x="85" y="201" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99082623106060608" green="0.99082623106060608" blue="0.99082623106060608" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLh-TK-prS">
+                                <rect key="frame" x="36" y="36" width="93" height="41"/>
+                                <color key="backgroundColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="push!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="notclear" destination="ul4-jY-Eiu" id="Thr-Cb-CBw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8s-Me-YzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,11 +196,40 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="wH8-Hr-YhY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHw-RZ-1Fo" userLabel="clear">
+                                <rect key="frame" x="21" y="101" width="338" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="を達成したよ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-Vl-WJj">
+                                <rect key="frame" x="111" y="152" width="158" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbZ-ik-doS">
+                                <rect key="frame" x="21" y="28" width="97" height="43"/>
+                                <color key="backgroundColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="push!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="load2" destination="Nxz-9d-zxw" eventType="touchUpInside" id="te7-lW-U5H"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="clear" destination="WHw-RZ-1Fo" id="vkH-lk-JVL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dID-Fg-bFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -336,6 +393,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokuhyoutoutatu.png" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-r9-jT9">
+                                <rect key="frame" x="14" y="177" width="178" height="131"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJo-FX-q38" userLabel="Toutatu">
                                 <rect key="frame" x="43" y="238" width="192" height="138"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="50"/>
@@ -357,15 +417,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-d4-MFh">
-                                <rect key="frame" x="189" y="28" width="30" height="30"/>
-                                <state key="normal" title="load">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="load:" destination="yaW-wo-zCa" eventType="touchUpInside" id="lLR-eZ-RPj"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tanni_2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ0-cM-pPE" userLabel="Tanni_2">
                                 <rect key="frame" x="182" y="325" width="59" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -384,14 +435,24 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="rOq-km-k4c"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokuhyoutoutatu.png" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-r9-jT9">
-                                <rect key="frame" x="14" y="177" width="178" height="131"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-d4-MFh">
+                                <rect key="frame" x="25" y="20" width="66" height="29"/>
+                                <color key="backgroundColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="push!">
+                                    <color key="titleColor" red="0.99082623110000001" green="0.99082623110000001" blue="0.99082623110000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="load:" destination="yaW-wo-zCa" eventType="touchUpInside" id="lLR-eZ-RPj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="Daily" destination="to6-WZ-GsO" id="NWT-RF-dfC"/>
+                        <outlet property="Nokori" destination="vfm-sl-OOQ" id="bj1-jh-u5z"/>
                         <outlet property="Tanni_1" destination="Ls3-3o-nmM" id="4di-5Z-jBB"/>
                         <outlet property="Tanni_2" destination="HJ0-cM-pPE" id="1Gn-Os-iTM"/>
                         <outlet property="Toutatu" destination="EJo-FX-q38" id="Dr3-UE-iZE"/>

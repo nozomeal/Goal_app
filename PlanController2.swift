@@ -13,16 +13,16 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
 
     
     //日付のアウトレット
-    @IBOutlet var date: UILabel!
+    @IBOutlet var kigen: UILabel!
     //pickerviewのアウトレット
     @IBOutlet var datePicker1: UIDatePicker!
     
     @IBAction func changed(sender: UIDatePicker) {
-        date.text = format(datePicker1.date,style: "yyyy年,MM月dd日")
+        kigen.text = format(datePicker1.date,style: "yyyy年,MM月dd日")
         
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         //AppDelegateのインスタンスを取得
-        appDelegate.date = "date"
+        appDelegate.kigen = "kigen"
         //appDelegateの変数を操作
         
     }
@@ -82,7 +82,7 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         
         // キー: "saveText" , 値: "" を格納。（idは任意）
         userDefaults.setObject(Tanni.text, forKey: "saveTanni")
-        userDefaults.setObject(date.text, forKey: "saveDate")
+        userDefaults.setObject(kigen.text, forKey: "savekigen")
 
     }
 }

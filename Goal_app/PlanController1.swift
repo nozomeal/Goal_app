@@ -28,8 +28,6 @@ class PlanController1: UIViewController {
     
     //OK3ボタン
     @IBAction func OK3(sender: AnyObject) {
-        
-        
         // saveボタンのアクション
         // データ保存処理
         // NSUserDefaultsインスタンスの生成

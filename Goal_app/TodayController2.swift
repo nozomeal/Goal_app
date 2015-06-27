@@ -45,7 +45,7 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         //AppDelegateのインスタンスを取得
         var numberStr = appDelegate.numberStr
         var todayNumberStr = appDelegate.todayNumberStr
-        var date = appDelegate.date
+        var kigen = appDelegate.kigen
     
         
        //到達までの残りの数値の計算
@@ -72,22 +72,36 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         Toutatu.text = String(y)
         
         
-      /*  //残りの日数
-        let start = "2000/10/09 23:58:59"
-        let now = "2041/10/09 00:00:00"
+      //残りの日数
+        let now = NSDate() // 現在日時の取得
+        
+        let kigen1 = "2041/10/09 00:00:00" //目標期限を取得するようにする
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         
-        let startDate:NSDate? = dateFormatter.dateFromString(start)
-        let endDate:NSDate? = dateFormatter.dateFromString(end)
+        let nowDate:NSDate? = dateFormatter.dateFromString(now)
+        let kigen1Date:NSDate? = dateFormatter.dateFromString(kigen1)
         
         let cal = NSCalendar.currentCalendar()
-        let calUnit:NSCalendarUnit = .CalendarUnitSecond | .CalendarUnitMinute | .CalendarUnitHour | .CalendarUnitDay | .CalendarUnitYear
+        let calUnit:NSCalendarUnit = .CalendarUnitDay | .CalendarUnitYear
         
-        let components = cal.components(calUnit, fromDate: startDate!, toDate: endDate!, options: nil)
+        let components = cal.components(calUnit, fromDate: nowDate!, toDate: kigen1Date!, options: nil)
         
         
+        var z: Int = 0
+        z = components.day + components.year * 365
+        
+        Nokori.text = String(z)
+        
+        
+        
+        //１日あたり
+        var daily: Int = 0
+        
+        daily = y / z
+        
+        Daily.text = String (daily)
         
         
         // データ読み込み処理
@@ -105,7 +119,4 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
 
         
     }
-}*/
-
-}
 }

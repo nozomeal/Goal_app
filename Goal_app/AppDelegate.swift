@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var numberStr:String?
     var todayNumberStr:String?
-    var date:String?
+    var kigen:String?
+    var Settei:String?
     
 
 

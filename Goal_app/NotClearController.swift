@@ -20,6 +20,17 @@ class NotClearController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var notclear: UILabel!
+    // データ読み込み処理
     
+    @IBAction func load3(){
+        // NSUserDefaultsインスタンスの生成
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        // キーが"saveSetteir"のStringをとります。
+        var loadText6 : String! = userDefaults.stringForKey("saveSettei")
+        // labelに表示
+        notclear.text = loadText6
+    }
+
     
 }

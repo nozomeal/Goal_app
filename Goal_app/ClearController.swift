@@ -20,6 +20,17 @@ class ClearController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+ 
+    @IBOutlet weak var clear: UILabel!
+    // データ読み込み処理
+   
+    @IBAction func load2(){
+    // NSUserDefaultsインスタンスの生成
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    // キーが"saveSetteir"のStringをとります。
+    var loadText5 : String! = userDefaults.stringForKey("saveSettei")
+    // labelに表示
+    clear.text = loadText5
+    }
 }
+
