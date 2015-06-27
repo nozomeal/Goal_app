@@ -41,7 +41,7 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     }
     
     
-    
+    //textfeild の設定
     private var myTextField: UITextField!
     
     //number（textfield)のアウトレット
@@ -82,7 +82,7 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         
         // キー: "saveText" , 値: "" を格納。（idは任意）
         userDefaults.setObject(Tanni.text, forKey: "saveTanni")
-        userDefaults.setObject(data.text, forKey: "saveData")
+        userDefaults.setObject(date.text, forKey: "saveDate")
 
     }
 }

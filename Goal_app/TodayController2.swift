@@ -43,58 +43,49 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         //AppDelegateのインスタンスを取得
-        var number = appDelegate.numberStr
-        var todaynumber = appDelegate.todayNumberStr
+        var numberStr = appDelegate.numberStr
+        var todayNumberStr = appDelegate.todayNumberStr
         var date = appDelegate.date
     
         
-       /*//到達までの残りの数値の計算
-       /* import = Darwin
-        var str: String = "10.5"
-        var doubleNum: Double = atof(str)
-        //10.5*/
-        
-        if let x1 = numberString?.toInt(){
-            //you can use x1 here
+       //到達までの残りの数値の計算
+    
+        if var x1 = numberStr?.toInt(){
+        // you can use x1 here
+        }
+        if var x2  = todayNumberStr?.toInt(){
+            // you can use x2 here
         }
         
-        if let x2 = todayNumberString?.toInt(){
-            //you can use x2 here
-        }
-        
-        var y: Double = 0
-        
-        if(x1 < x2){
+        //到達（y）
+        var y: Int = 0
+        if x1 < x2 {
             // 目標数値＜現在の数値
             y = x2 - x1
-            //Toutatu.text = String(y)
-        }else if(x1 > x2){
+            
+        }else if x1 > x2 {
             //　目標数値＞現在の数値
             y = x1 - x2
-            //Toutatu.text = String(y)
+           
         }
-        Toutatu.text = String(stringInterpolationSegment: y)*/
+        //到達ラベルに表示
+        Toutatu.text = String(y)
         
         
-        //残りの日数
-        /*let date = NSDate()
-        let calendar = NSCalendar(identifier: NSGregorianCalendar)
-        //和暦を使いたいときはidentifierにはNSJapaneseCalendarを指定
-        //let calendar = NSCalendar(identifier: NSJapaneseCalendar)
+      /*  //残りの日数
+        let start = "2000/10/09 23:58:59"
+        let now = "2041/10/09 00:00:00"
         
-        var comps:NSDateComponents = calendar.components(NSCalendarUnit.YearCalendarUnit|NSCalendarUnit.MonthCalendarUnit|NSCalendarUnit.DayCalendarUnit,
-            fromDate: date)
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
         
-        var year = comps.year
-        var month = comps.month
-        var day = comps.day
+        let startDate:NSDate? = dateFormatter.dateFromString(start)
+        let endDate:NSDate? = dateFormatter.dateFromString(end)
         
+        let cal = NSCalendar.currentCalendar()
+        let calUnit:NSCalendarUnit = .CalendarUnitSecond | .CalendarUnitMinute | .CalendarUnitHour | .CalendarUnitDay | .CalendarUnitYear
         
-    
-
-        Nokori =*/
-
-        
+        let components = cal.components(calUnit, fromDate: startDate!, toDate: endDate!, options: nil)
         
         
         
@@ -114,12 +105,7 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
 
         
     }
+}*/
+
 }
-
-
-
-    
-    
-    
-    
-
+}

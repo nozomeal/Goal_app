@@ -25,7 +25,7 @@ class TodayController1: UIViewController {
     }
     
     //TodayNumberのアウトレット
-    @IBOutlet weak var todayNumberStr: UILabel!
+    @IBOutlet weak var todayNumberStr: UITextField!
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)

@@ -34,7 +34,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Krh-xw-8Pb" kind="show" id="ZJt-fa-KpG"/>
+                                    <segue destination="i0q-pP-gcJ" kind="show" id="Sar-Rz-aAx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-7S-5xj" userLabel="Plan">
@@ -109,77 +109,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Tanni_3" destination="SEH-oo-f3Y" id="C0J-44-KjO"/>
-                        <outlet property="todaynumber" destination="usi-ET-b9M" id="wtr-mx-1XG"/>
+                        <outlet property="todayNumberStr" destination="usi-ET-b9M" id="Snz-Pg-DgP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2715.5" y="1393.5"/>
-        </scene>
-        <!--Change Controller-->
-        <scene sceneID="erX-UR-yGm">
-            <objects>
-                <viewController id="Krh-xw-8Pb" userLabel="Change Controller" customClass="ChangeController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="X76-oX-Vhs"/>
-                        <viewControllerLayoutGuide type="bottom" id="spg-wA-qNZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rm6-kx-wTO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CHANGE_back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hna-jD-IGp">
-                                <rect key="frame" x="-16" y="0.0" width="391" height="667"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="suuti.png" translatesAutoresizingMaskIntoConstraints="NO" id="jOz-gD-SU2">
-                                <rect key="frame" x="-31" y="28" width="190" height="130"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tanni.png" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-Hj-4hE">
-                                <rect key="frame" x="-36" y="145" width="189" height="131"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kijitu.png" translatesAutoresizingMaskIntoConstraints="NO" id="uMU-Ga-Xth">
-                                <rect key="frame" x="-19" y="291" width="178" height="138"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf2-wR-I7j">
-                                <rect key="frame" x="261" y="553" width="82" height="78"/>
-                                <state key="normal" title="top" backgroundImage="yajirusi.png">
-                                    <color key="titleColor" red="1" green="0.50383661589999995" blue="0.27940459709999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="qW1-GZ-3WH"/>
-                                </connections>
-                            </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cvE-gh-gFh">
-                                <rect key="frame" x="48" y="367" width="279" height="173"/>
-                                <date key="date" timeIntervalSinceReferenceDate="456397040.37298">
-                                    <!--2015-06-19 08:57:20 +0000-->
-                                </date>
-                            </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DrU-E7-Or0" userLabel="Suuti">
-                                <rect key="frame" x="62" y="128" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-FN-YEp" userLabel="Tanni">
-                                <rect key="frame" x="62" y="253" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmB-Xf-S7h">
-                                <rect key="frame" x="20" y="531" width="100" height="100"/>
-                                <state key="normal" image="OK_botton.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Myi-vD-tLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="956.5" y="1724.5"/>
+            <point key="canvasLocation" x="2591.5" y="1393.5"/>
         </scene>
         <!--Not Clear Controller-->
         <scene sceneID="j6z-p7-qeU">
@@ -210,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8s-Me-YzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2254.5" y="2858.5"/>
+            <point key="canvasLocation" x="3194.5" y="538.5"/>
         </scene>
         <!--Clear Controller-->
         <scene sceneID="aQj-ZY-ogB">
@@ -241,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dID-Fg-bFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601.5" y="2874.5"/>
+            <point key="canvasLocation" x="2789.5" y="538.5"/>
         </scene>
         <!--Plan Controller1-->
         <scene sceneID="JTg-5g-YDr">
@@ -362,9 +297,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Tanni" destination="14H-tU-Xca" id="nln-N5-t5C"/>
-                        <outlet property="data" destination="Dea-j4-aLg" id="4Ak-P8-XZh"/>
-                        <outlet property="dataPicker1" destination="x0z-uK-l7F" id="wo4-E8-hpS"/>
-                        <outlet property="number" destination="doN-W3-Hzl" id="9Cg-ck-ob7"/>
+                        <outlet property="date" destination="Dea-j4-aLg" id="dOA-54-gVS"/>
+                        <outlet property="datePicker1" destination="x0z-uK-l7F" id="cey-jv-QRx"/>
+                        <outlet property="numberStr" destination="doN-W3-Hzl" id="XTJ-bg-4yv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ki-y4-0ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -396,14 +331,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tanni_1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ls3-3o-nmM" userLabel="Tanni_1">
-                                <rect key="frame" x="161" y="160" width="52" height="41"/>
+                                <rect key="frame" x="161" y="160" width="59" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokuhyoutoutatu.png" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-r9-jT9">
-                                <rect key="frame" x="16" y="170" width="178" height="131"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJo-FX-q38" userLabel="Toutatu">
                                 <rect key="frame" x="43" y="238" width="192" height="138"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="50"/>
@@ -435,7 +367,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tanni_2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ0-cM-pPE" userLabel="Tanni_2">
-                                <rect key="frame" x="171" y="325" width="53" height="36"/>
+                                <rect key="frame" x="182" y="325" width="59" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -452,6 +384,9 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="rOq-km-k4c"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokuhyoutoutatu.png" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-r9-jT9">
+                                <rect key="frame" x="14" y="177" width="178" height="131"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -464,12 +399,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tdg-TG-3MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3528.5" y="1400.5"/>
+            <point key="canvasLocation" x="3152.5" y="1393.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="1day_.png" width="400" height="300"/>
-        <image name="CHANGE_back1.png" width="1242" height="2208"/>
         <image name="Clear!.png" width="1242" height="2208"/>
         <image name="Mkuhyou_set.png" width="400" height="300"/>
         <image name="OK_botton.png" width="100" height="100"/>
@@ -488,9 +422,9 @@
         <image name="tanni.png" width="400" height="300"/>
         <image name="tebiki.png" width="400" height="300"/>
         <image name="today_nyuuyroku.png" width="400" height="300"/>
-        <image name="yajirusi.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rOq-km-k4c"/>
+        <segue reference="cDs-q1-F3n"/>
     </inferredMetricsTieBreakers>
 </document>
