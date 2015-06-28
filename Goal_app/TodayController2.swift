@@ -28,70 +28,94 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-   
-    
-    
-    // loadボタンのアクション
-    @IBAction func load(sender: AnyObject) {
+        
         
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         //AppDelegateのインスタンスを取得
         var numberStr = appDelegate.numberStr
         var todayNumberStr = appDelegate.todayNumberStr
-        var kigen = appDelegate.kigen
-    
-        
-       //到達までの残りの数値の計算
-    
-        if var x1 = numberStr?.toInt(){
-        // you can use x1 here
-        }
-        if var x2  = todayNumberStr?.toInt(){
-            // you can use x2 here
-        }
+        //var kigen1 = appDelegate.kigen1
         
         //到達（y）
         var y: Int = 0
-        if x1 < x2 {
-            // 目標数値＜現在の数値
-            y = x2 - x1
-            
-        }else if x1 > x2 {
-            //　目標数値＞現在の数値
-            y = x1 - x2
-           
+        //到達までの残りの数値の計算
+
+        
+        
+        if  numberStr != nil && todayNumberStr != nil {
+        
+        if var x1 = numberStr?.toInt(){
+            //Optional Binding
+            if var x2 = todayNumberStr?.toInt(){
+                //Optional Binding
+                
+                //到達（y）
+                if x2 > x1 {
+                    // 目標数値＜現在の数値
+                    y = x2 - x1
+                    
+                }else if x1 > x2 {
+                    //　目標数値＞現在の数値
+                    y = x1 - x2
+                }
+                
+                //到達ラベルに表示
+                Toutatu.text = String(y)
+            }
+
+                
         }
-        //到達ラベルに表示
-        Toutatu.text = String(y)
+//        if var x2 = todayNumberStr?.toInt(){
+//            //Optional Binding
+//        }
+        
+//            
+//            //到達（y）
+//            
+//            if x2 > x1 {
+//                // 目標数値＜現在の数値
+//                y = x2 - x1
+//                
+//            }else if x1 > x2 {
+//                //　目標数値＞現在の数値
+//                y = x1 - x2
+//            }
+//            
+//            //到達ラベルに表示
+//            Toutatu.text = String(y)
+//        }
         
         
-      //残りの日数
-        let now = NSDate() // 現在日時の取得
+        //残りの日数
+        let nowDate = NSDate() // 現在日時の取得
+        //let now = str.dateUsingEncoding(NSUTF8StringEncoding)
+        // NSData to String
+        let kigen = appDelegate.kigen
         
-        let kigen1 = "2041/10/09 00:00:00" //目標期限を取得するようにする
+        //目標期限を取得するようにする
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
         
-        let nowDate:NSDate? = dateFormatter.dateFromString(now)
-        let kigen1Date:NSDate? = dateFormatter.dateFromString(kigen1)
         
+        let kigenDate:NSDate? = dateFormatter.dateFromString(kigen!)
         let cal = NSCalendar.currentCalendar()
         let calUnit:NSCalendarUnit = .CalendarUnitDay | .CalendarUnitYear
+        let components = cal.components(calUnit, fromDate: nowDate, toDate: kigenDate!, options: nil)
         
-        let components = cal.components(calUnit, fromDate: nowDate!, toDate: kigen1Date!, options: nil)
+        
+        //        func format(date : NSDate, style : String) -> String {
+        //            let dateFormatter = NSDateFormatter()
+        //            dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        //            dateFormatter.dateFormat = style
+        //            return  dateFormatter.stringFromDate(date)
+        //
+        //
+        //        }
         
         
         var z: Int = 0
         z = components.day + components.year * 365
-        
         Nokori.text = String(z)
         
         
@@ -100,7 +124,6 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         var daily: Int = 0
         
         daily = y / z
-        
         Daily.text = String (daily)
         
         
@@ -116,7 +139,14 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         // labelに表示
         Tanni_1.text = loadText2
         Tanni_2.text = loadText3
-
         
     }
+    
+     func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    }
 }
+

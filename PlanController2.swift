@@ -38,6 +38,8 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
         dateFormatter.dateFormat = style
         return  dateFormatter.stringFromDate(date)
+        
+
     }
     
     
@@ -46,6 +48,9 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     
     //number（textfield)のアウトレット
     @IBOutlet weak var numberStr: UITextField!
+    
+    
+    
     //Tanni(textfield)のアウトレット
     @IBOutlet weak var Tanni: UITextField!
     
@@ -57,8 +62,10 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib
+    
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

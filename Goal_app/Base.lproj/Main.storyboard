@@ -90,8 +90,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="OK2:" destination="Xws-N4-1p1" eventType="touchUpInside" id="mkB-zC-a5h"/>
-                                    <segue destination="yaW-wo-zCa" kind="show" id="Cg8-Ax-26g"/>
+                                    <action selector="OK2:" destination="Xws-N4-1p1" eventType="touchUpInside" id="uuE-fl-VQW"/>
+                                    <segue destination="yaW-wo-zCa" kind="show" id="zrT-aj-ii4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-2M-qMM" userLabel="load1">
@@ -354,8 +354,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Tanni" destination="14H-tU-Xca" id="nln-N5-t5C"/>
-                        <outlet property="date" destination="Dea-j4-aLg" id="dOA-54-gVS"/>
                         <outlet property="datePicker1" destination="x0z-uK-l7F" id="cey-jv-QRx"/>
+                        <outlet property="kigen" destination="Dea-j4-aLg" id="7Uo-NW-gYP"/>
                         <outlet property="numberStr" destination="doN-W3-Hzl" id="XTJ-bg-4yv"/>
                     </connections>
                 </viewController>
@@ -442,9 +442,6 @@
                                     <color key="titleColor" red="0.99082623110000001" green="0.99082623110000001" blue="0.99082623110000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="load:" destination="yaW-wo-zCa" eventType="touchUpInside" id="lLR-eZ-RPj"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
