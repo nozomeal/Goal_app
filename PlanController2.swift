@@ -49,8 +49,6 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     //number（textfield)のアウトレット
     @IBOutlet weak var numberStr: UITextField!
     
-    
-    
     //Tanni(textfield)のアウトレット
     @IBOutlet weak var Tanni: UITextField!
     
@@ -75,22 +73,21 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     //OK1のアクション
     @IBAction func OK1(sender: AnyObject) {
     
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        //AppDelegateのインスタンスを取得
-        appDelegate.numberStr = "numberStr"
-        //appDelegateの変数を操作
-    
-    // saveボタンのアクション
+        //OKボタンで保存
         // データ保存処理
         // NSUserDefaultsインスタンスの生成
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-
-        
-        // キー: "saveText" , 値: "" を格納。（idは任意）
         userDefaults.setObject(Tanni.text, forKey: "saveTanni")
         userDefaults.setObject(kigen.text, forKey: "savekigen")
-
+        userDefaults.setObject(numberStr, forKey: "numberStr")
+        
+        
+        
+        //データの受け渡し送り手
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.numberStr = "numberStr"
+        
     }
 }
 

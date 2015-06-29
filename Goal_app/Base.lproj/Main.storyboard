@@ -94,17 +94,6 @@
                                     <segue destination="yaW-wo-zCa" kind="show" id="zrT-aj-ii4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-2M-qMM" userLabel="load1">
-                                <rect key="frame" x="24" y="34" width="61" height="35"/>
-                                <color key="backgroundColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="push!">
-                                    <color key="titleColor" red="0.99082623110000001" green="0.99082623110000001" blue="0.99082623110000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="load1:" destination="Xws-N4-1p1" eventType="touchUpInside" id="YSc-li-N36"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -117,123 +106,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2591.5" y="1393.5"/>
-        </scene>
-        <!--Not Clear Controller-->
-        <scene sceneID="j6z-p7-qeU">
-            <objects>
-                <viewController id="mYL-Cj-t5k" userLabel="Not Clear Controller" customClass="NotClearController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wDC-gs-sKi"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gp2-wJ-4mX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tXg-Fw-0fH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="not_clear1.png" translatesAutoresizingMaskIntoConstraints="NO" id="soG-8K-5EF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcN-5O-Ufl">
-                                <rect key="frame" x="303" y="596" width="30" height="30"/>
-                                <state key="normal" title="top">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="cIM-kw-L2j"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul4-jY-Eiu" userLabel="notclear">
-                                <rect key="frame" x="16" y="135" width="343" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="を達成できませんでした。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dny-4T-ROZ">
-                                <rect key="frame" x="85" y="201" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99082623106060608" green="0.99082623106060608" blue="0.99082623106060608" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLh-TK-prS">
-                                <rect key="frame" x="36" y="36" width="93" height="41"/>
-                                <color key="backgroundColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="push!">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="notclear" destination="ul4-jY-Eiu" id="Thr-Cb-CBw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i8s-Me-YzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3194.5" y="538.5"/>
-        </scene>
-        <!--Clear Controller-->
-        <scene sceneID="aQj-ZY-ogB">
-            <objects>
-                <viewController id="Nxz-9d-zxw" userLabel="Clear Controller" customClass="ClearController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vh2-0j-XCc"/>
-                        <viewControllerLayoutGuide type="bottom" id="rdG-bU-IAA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hJe-wF-8XN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clear!.png" translatesAutoresizingMaskIntoConstraints="NO" id="nRM-oU-gUE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsN-me-L6R">
-                                <rect key="frame" x="266" y="550" width="30" height="30"/>
-                                <state key="normal" title="top">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="wH8-Hr-YhY"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHw-RZ-1Fo" userLabel="clear">
-                                <rect key="frame" x="21" y="101" width="338" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="を達成したよ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-Vl-WJj">
-                                <rect key="frame" x="111" y="152" width="158" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbZ-ik-doS">
-                                <rect key="frame" x="21" y="28" width="97" height="43"/>
-                                <color key="backgroundColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="push!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="load2" destination="Nxz-9d-zxw" eventType="touchUpInside" id="te7-lW-U5H"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="clear" destination="WHw-RZ-1Fo" id="vkH-lk-JVL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dID-Fg-bFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2789.5" y="538.5"/>
         </scene>
         <!--Plan Controller1-->
         <scene sceneID="JTg-5g-YDr">
@@ -432,7 +304,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="rOq-km-k4c"/>
+                                    <segue destination="Nrx-jB-u68" kind="show" id="xeB-Qo-BBS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-d4-MFh">
@@ -442,6 +314,9 @@
                                     <color key="titleColor" red="0.99082623110000001" green="0.99082623110000001" blue="0.99082623110000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="load" destination="yaW-wo-zCa" eventType="touchUpInside" id="mu3-5Q-NvM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -459,10 +334,56 @@
             </objects>
             <point key="canvasLocation" x="3152.5" y="1393.5"/>
         </scene>
+        <!--Result Controller-->
+        <scene sceneID="0cy-Rb-4eY">
+            <objects>
+                <viewController id="Nrx-jB-u68" customClass="ResultController" customModule="Goal_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jbg-ue-c4T"/>
+                        <viewControllerLayoutGuide type="bottom" id="KPd-3i-iNp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BZn-Jd-NGI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Te-y6-7W1">
+                                <rect key="frame" x="16" y="20" width="343" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.79442967031619161" green="0.45315313146376279" blue="0.9881431502525253" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="coments" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EWG-i0-Nw2">
+                                <rect key="frame" x="67" y="97" width="240" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNh-8p-dBe">
+                                <rect key="frame" x="16" y="164" width="343" height="466"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O8-je-A98">
+                                <rect key="frame" x="281" y="631" width="56" height="28"/>
+                                <color key="backgroundColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="top">
+                                    <color key="titleColor" red="0.99082623110000001" green="0.99082623110000001" blue="0.99082623110000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="S4J-On-AiC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRx-id-Dgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3659.5" y="1399.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1day_.png" width="400" height="300"/>
-        <image name="Clear!.png" width="1242" height="2208"/>
         <image name="Mkuhyou_set.png" width="400" height="300"/>
         <image name="OK_botton.png" width="100" height="100"/>
         <image name="PLAN.png" width="300" height="150"/>
@@ -475,14 +396,13 @@
         <image name="hiniti.png" width="200" height="150"/>
         <image name="kijitu.png" width="400" height="300"/>
         <image name="mokuhyoutoutatu.png" width="200" height="150"/>
-        <image name="not_clear1.png" width="1242" height="2208"/>
         <image name="suuti.png" width="400" height="300"/>
         <image name="tanni.png" width="400" height="300"/>
         <image name="tebiki.png" width="400" height="300"/>
         <image name="today_nyuuyroku.png" width="400" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rOq-km-k4c"/>
+        <segue reference="S4J-On-AiC"/>
         <segue reference="cDs-q1-F3n"/>
     </inferredMetricsTieBreakers>
 </document>

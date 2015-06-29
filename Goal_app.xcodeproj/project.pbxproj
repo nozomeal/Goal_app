@@ -50,6 +50,8 @@
 		23C9CA0D1B38FDC5006BD465 /* PlanController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C9CA0C1B38FDC5006BD465 /* PlanController1.swift */; };
 		23C9CA0F1B390A56006BD465 /* Mkuhyou_set.png in Resources */ = {isa = PBXBuildFile; fileRef = 23C9CA0E1B390A56006BD465 /* Mkuhyou_set.png */; };
 		23C9CA131B394235006BD465 /* tebiki.png in Resources */ = {isa = PBXBuildFile; fileRef = 23C9CA121B394235006BD465 /* tebiki.png */; };
+		23E3C1601B412CD2004B533B /* clear1.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E3C15F1B412CD2004B533B /* clear1.png */; };
+		23E3C1621B412CF7004B533B /* ganba.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E3C1611B412CF7004B533B /* ganba.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		23C9CA0C1B38FDC5006BD465 /* PlanController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanController1.swift; sourceTree = "<group>"; };
 		23C9CA0E1B390A56006BD465 /* Mkuhyou_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mkuhyou_set.png; sourceTree = "<group>"; };
 		23C9CA121B394235006BD465 /* tebiki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tebiki.png; sourceTree = "<group>"; };
+		23E3C15F1B412CD2004B533B /* clear1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear1.png; sourceTree = "<group>"; };
+		23E3C1611B412CF7004B533B /* ganba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ganba.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 		23537EBF1B312E2600099A37 /* Goal_app */ = {
 			isa = PBXGroup;
 			children = (
+				23E3C1611B412CF7004B533B /* ganba.png */,
+				23E3C15F1B412CD2004B533B /* clear1.png */,
 				23C9CA121B394235006BD465 /* tebiki.png */,
 				23C9CA0E1B390A56006BD465 /* Mkuhyou_set.png */,
 				23537F1E1B34184C00099A37 /* TOP_up.png */,
@@ -322,6 +328,7 @@
 				23537EF21B32C36E00099A37 /* kijitu.png in Resources */,
 				23537F191B34127500099A37 /* OK_botton.png in Resources */,
 				23537EEB1B32B5AB00099A37 /* TODAY_back.png in Resources */,
+				23E3C1601B412CD2004B533B /* clear1.png in Resources */,
 				23537F0B1B33D6DB00099A37 /* yajirusi.png in Resources */,
 				23537F1D1B34174A00099A37 /* not_clear1.png in Resources */,
 				23537F1F1B34184C00099A37 /* TOP_up.png in Resources */,
@@ -331,6 +338,7 @@
 				23537F131B34052E00099A37 /* hiniti.png in Resources */,
 				23537ECD1B312E2600099A37 /* LaunchScreen.xib in Resources */,
 				23537EF91B32C75200099A37 /* today_henkou.png in Resources */,
+				23E3C1621B412CF7004B533B /* ganba.png in Resources */,
 				23537EF61B32C37C00099A37 /* suuti.png in Resources */,
 				23537EE51B32B17800099A37 /* PLAN.png in Resources */,
 				23537EE31B32AED600099A37 /* first_top.png in Resources */,

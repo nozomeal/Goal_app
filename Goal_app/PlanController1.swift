@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlanController1: UIViewController {
+class PlanController1: UIViewController ,UIApplicationDelegate{
     
     
     //設定のアウトレット
@@ -28,14 +28,18 @@ class PlanController1: UIViewController {
     
     //OK3ボタン
     @IBAction func OK3(sender: AnyObject) {
-        // saveボタンのアクション
+        
+        
+        // OK3ボタンで保存
         // データ保存処理
         // NSUserDefaultsインスタンスの生成
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
         // キー: "saveText" , 値: "" を格納。（idは任意）
         userDefaults.setObject(Settei.text, forKey: "saveSettei")
+        //データの受け渡し送り手
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.Settei = "saveSettei"
+    
     }
-    
-    
 }
