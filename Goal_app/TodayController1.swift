@@ -2,21 +2,20 @@
 //  TodayController1.swift
 //  Goal_app
 //
-//  Created by Nozomi Sakamoto on 2015/06/20.
+//  Created by Nozomi Sakamoto on 2015/06/30.
 //  Copyright (c) 2015年 Nozomi Sakamoto. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import Foundation
 
-class TodayController1: UIViewController ,UITextField,UIApplicationDelegate{
-    
+class TodayController1: UIViewController {
     
     
     // Tanni_3のアウトレット
     @IBOutlet weak var Tanni_3: UILabel!
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,10 +36,10 @@ class TodayController1: UIViewController ,UITextField,UIApplicationDelegate{
     //TodayNumberのアウトレット
     @IBOutlet weak var todayNumberStr: UITextField!
     
-//    func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        self.view.endEditing(true)
-//        return false
-//    }
+    //    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    //        self.view.endEditing(true)
+    //        return false
+    //    }
     @IBAction func OK2(sender: AnyObject) {
         //データの受け渡し送り手
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -53,6 +52,5 @@ class TodayController1: UIViewController ,UITextField,UIApplicationDelegate{
         userDefaults.setObject(todayNumberStr.text, forKey: "savetodayNumberStr")
         
     }
-
-    
+   
 }

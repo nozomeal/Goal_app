@@ -12,11 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var numberStr:String?
-    var todayNumberStr:String?
-    var kigen:String?
-    var Settei:String?
-    var Toutatu:String?
+    var numberStr:String!
+    var todayNumberStr:String!
+    var kigen:String!
+    var Settei:String!
+    var Toutatu:String!
+    var Nokori:String!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

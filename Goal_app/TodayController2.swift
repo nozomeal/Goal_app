@@ -44,9 +44,9 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         //到達までの残りの数値の計算
         if  numberStr != nil && todayNumberStr != nil {
         
-        if var x1 = numberStr?.toInt(){
+        if var x1 = numberStr.toInt(){
             //Optional Binding
-        if var x2 = todayNumberStr?.toInt(){
+        if var x2 = todayNumberStr.toInt(){
             //Optional Binding
                 
             //到達（y）
@@ -62,21 +62,16 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
                 //到達ラベルに表示
                 Toutatu.text = String(y)
             }
-
-            //データ受け渡し送り手
-            var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.Toutatu = "y"
-                
         }
         
         //残りの日数
         let nowDate = NSDate() // 現在日時の取得
         
-            // NSData to String
+        // NSData to String
         let kigen = appDelegate.kigen
         
-//        //目標期限を取得するようにする
-//        if var kigen = kigen{
+        //目標期限を取得するようにする
+
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
         let kigenDate:NSDate? = dateFormatter.dateFromString(kigen!)
@@ -100,18 +95,11 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
             
             }
         
-        
-        // キー: "saveToutatu" , 値: "" を格納。（idは任意）
-        userDefaults.setObject(Toutatu.text, forKey: "saveToutatu")
-        
-        // データ読み込み処理
-        // NSUserDefaultsインスタンスの生成
+        // データ読み込み
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        
-        // キーが"saveTanni"のStringをとります。
         var loadText2 : String! = userDefaults.stringForKey("saveTanni")
-        // キーが"saveTanni"のStringをとります。
         var loadText3 : String! = userDefaults.stringForKey("saveTanni")
+        
         
         // labelに表示
         Tanni_1.text = loadText2
@@ -121,6 +109,19 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
      override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func OK4(){
+        
+        //データ受け渡し送り手
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.Toutatu = "saveToutatu"
+        
+        // データ保存
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(Toutatu.text, forKey: "saveToutatu")
+        userDefaults.setObject(Nokori.text, forKey: "saveNokori")
     }
 }
 

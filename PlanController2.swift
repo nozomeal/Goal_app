@@ -20,25 +20,18 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     @IBAction func changed(sender: UIDatePicker) {
         kigen.text = format(datePicker1.date,style: "yyyy年,MM月dd日")
         
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        //AppDelegateのインスタンスを取得
-        appDelegate.kigen = "kigen"
-        //appDelegateの変数を操作
-        
     }
     
     // 書式指定に従って日付を文字列に変換します
-    // パラメータ
     //  date : 日付データ(NSDate型)を指定します
     //  style : 書式を指定します
     //          yyyy 西暦,MM 月,dd 日
-    //
-    func format(date : NSDate, style : String) -> String {
+    func format(kigen : NSDate, style : String) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
         dateFormatter.dateFormat = style
-        return  dateFormatter.stringFromDate(date)
-        
+        return  dateFormatter.stringFromDate(kigen)
+
 
     }
     
@@ -58,37 +51,38 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         return false
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        numberStr.delegate = self
+        Tanni.delegate = self
         // Do any additional setup after loading the view, typically from a nib
-    
     }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
 
     
     //OK1のアクション
     @IBAction func OK1(sender: AnyObject) {
     
         //OKボタンで保存
-        // データ保存処理
-        // NSUserDefaultsインスタンスの生成
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        
+        // データ保存
+       let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setObject(Tanni.text, forKey: "saveTanni")
         userDefaults.setObject(kigen.text, forKey: "savekigen")
-        userDefaults.setObject(numberStr, forKey: "numberStr")
+        userDefaults.setObject(numberStr.text, forKey: "numberStr")
         
-        
-        
-        //データの受け渡し送り手
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.numberStr = "numberStr"
-        
+        appDelegate.kigen = "kigen"
+
     }
 }
+
 
 

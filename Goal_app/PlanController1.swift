@@ -31,12 +31,12 @@ class PlanController1: UIViewController ,UIApplicationDelegate{
         
         
         // OK3ボタンで保存
-        // データ保存処理
+        // データ保存
         // NSUserDefaultsインスタンスの生成
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        
-        // キー: "saveText" , 値: "" を格納。（idは任意）
         userDefaults.setObject(Settei.text, forKey: "saveSettei")
+        
+        
         //データの受け渡し送り手
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.Settei = "saveSettei"
