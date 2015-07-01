@@ -34,29 +34,31 @@ class ResultController: UIViewController,UIApplicationDelegate {
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         var Toutatu = appDelegate.Toutatu
         var Nokori = appDelegate.Nokori
-        
-        
-        if  Toutatu != nil && Nokori != nil {
-        if var t1 = Toutatu.toInt(){
-            if var n1 = Nokori.toInt(){
-        if t1 <= 0 {
-            TextMessege.text = String("目標を達成しました！次の目標をたてましょう！")
-            ResultImage.image = ResultPic1
-        } else if t1 > 0 {
-            TextMessege.text = String("明日も頑張りましょう！")
-            ResultImage.image = ResultPic0
-        }else if n1 == 0 {
-            TextMessege.text = String("目標達成ならず、、、もう一度目標を設定しましょう。")
-            ResultImage.image = ResultPic2
-        }
-            }
-            }
-        }
     }
+        
+        
+//        if  Toutatu != nil && Nokori != nil {
+//        if var t1 = Toutatu.toInt(){
+//            if var n1 = Nokori.toInt(){
+//        if t1 <= 0 {
+//            TextMessege.text = String("目標を達成しました！次の目標をたてましょう！")
+//            ResultImage.image = ResultPic1
+//        } else if t1 > 0 {
+//            TextMessege.text = String("明日も頑張りましょう！")
+//            ResultImage.image = ResultPic0
+//        }else if n1 == 0 {
+//            TextMessege.text = String("目標達成ならず、、、もう一度目標を設定しましょう。")
+//            ResultImage.image = ResultPic2
+//        }
+//            }
+            }
+
+
     
-     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
-    }
-}
+//     override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//        
+//    }
+//}
+

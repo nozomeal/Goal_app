@@ -29,7 +29,13 @@ class PlanController1: UIViewController ,UIApplicationDelegate{
    
         //OK3ボタン
     @IBAction func OK3(sender: AnyObject) {
-        
+//        
+//        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        // NSUserDefaults型でディスク書き込み
+//        let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+//        defaults.setInteger(appDelegate.Settei, forKey: "saveSettei")
+//        let Settei = defaults.synchronize()
+//        
         
         // OK3ボタンで保存
         // データ保存
@@ -38,7 +44,7 @@ class PlanController1: UIViewController ,UIApplicationDelegate{
         userDefaults.setObject(Settei.text, forKey: "saveSettei")
         
         
-        //データの受け渡し送り手
+        //データの受け渡し
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.Settei = "saveSettei"
     

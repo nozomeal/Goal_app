@@ -90,8 +90,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="OK2:" destination="Xws-N4-1p1" eventType="touchUpInside" id="uuE-fl-VQW"/>
-                                    <segue destination="yaW-wo-zCa" kind="show" id="zrT-aj-ii4"/>
+                                    <action selector="OK:" destination="Xws-N4-1p1" eventType="touchUpInside" id="B4O-Ab-Ktx"/>
+                                    <segue destination="yaW-wo-zCa" kind="show" id="fjz-iF-gyS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -100,7 +100,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Tanni_3" destination="SEH-oo-f3Y" id="C0J-44-KjO"/>
-                        <outlet property="todayNumberStr" destination="usi-ET-b9M" id="ewx-i4-obE"/>
+                        <outlet property="todayNumber" destination="usi-ET-b9M" id="7f9-ay-KKd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -304,8 +304,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="OK4" destination="yaW-wo-zCa" eventType="touchUpInside" id="8mC-1r-jDN"/>
                                     <segue destination="Nrx-jB-u68" kind="show" id="xeB-Qo-BBS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD0-k5-Lpp">
+                                <rect key="frame" x="200" y="59" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="load:" destination="yaW-wo-zCa" eventType="touchUpInside" id="MPK-Re-x6p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -313,8 +321,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Daily" destination="to6-WZ-GsO" id="NWT-RF-dfC"/>
-                        <outlet property="Nokori" destination="vfm-sl-OOQ" id="bj1-jh-u5z"/>
+                        <outlet property="Daily" destination="to6-WZ-GsO" id="BEA-yF-m7g"/>
+                        <outlet property="Nokori" destination="vfm-sl-OOQ" id="upW-no-u9v"/>
                         <outlet property="Tanni_1" destination="Ls3-3o-nmM" id="4di-5Z-jBB"/>
                         <outlet property="Tanni_2" destination="HJ0-cM-pPE" id="1Gn-Os-iTM"/>
                         <outlet property="Toutatu" destination="EJo-FX-q38" id="Dr3-UE-iZE"/>

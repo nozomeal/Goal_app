@@ -12,14 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var numberStr:String!
-    var todayNumberStr:String!
+    var todayNumber: Int = 0
     var kigen:String!
     var Settei:String!
-    var Toutatu:String!
+    var Toutatu: Int = 0
     var Nokori:String!
-
-
+    var number: Int = 0
+    var Tanni:String!
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true

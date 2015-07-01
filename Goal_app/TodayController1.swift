@@ -28,38 +28,66 @@ class TodayController1: UIViewController {
         Tanni_3.text = loadText4
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
+//    
     
     
-    
-    // selfをデリゲートにしているので、ここにデリゲートメソッドを書く
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
+//    // selfをデリゲートにしているので、ここにデリゲートメソッドを書く
+//    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+//        self.view.endEditing(true)
+//        return false
+//    }
     
     
     //TodayNumberのアウトレット
-    @IBOutlet weak var todayNumberStr: UITextField!
-    
-    //    func textFieldShouldReturn(textField: UITextField) -> Bool {
-    //        self.view.endEditing(true)
-    //        return false
-    //    }
-    @IBAction func OK2(sender: AnyObject) {
-        //データの受け渡し送り手
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.todayNumberStr = "savetodayNumberStr"
-        
-        // OK2ボタンのアクション
-        // データ保存処理
-        // NSUserDefaultsインスタンスの生成
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(todayNumberStr.text, forKey: "savetodayNumberStr")
-        
+    @IBOutlet weak var todayNumber: UITextField!
+     //selfをデリゲートにしているので、ここにデリゲートメソッドを書く
+        func textFieldShouldReturn(textField: UITextField!) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
+    @IBAction func OK(sender: AnyObject) {
+        // AppDelegateのインスタンスを取得
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        // appDelegateの変数を操作
+        ++appDelegate.number
+        // ラベル表示,ラベル用にString型へ変換
+        let tmpTodayNumber: Int = appDelegate.todayNumber
+        //textfield.text = "[\(String(tmpNumber))]"
     }
+    override func viewDidAppear(animated: Bool) {
+        // AppDelegateのインスタンスを取得
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        // ラベル表示,ラベル用にString型へ変換
+        let tmpTodayNumber: Int = appDelegate.todayNumber
+        //firstViewLabel.text = "[\(String(tmpPoint))]"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    @IBAction func OK2(sender: AnyObject) {
+//        //データの受け渡し送り手
+//        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        appDelegate.todayNumberStr =  "todayNumberStr"
+//        
+//        // OK2ボタンのアクション
+//        // データ保存処理
+//        // NSUserDefaultsインスタンスの生成
+//        let userDefaults = NSUserDefaults.standardUserDefaults()
+//        userDefaults.setObject(todayNumberStr.text, forKey: "savetodayNumberStr")
+//        
+//    }
    
 }

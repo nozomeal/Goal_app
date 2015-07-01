@@ -46,13 +46,15 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     @IBOutlet weak var Tanni: UITextField!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        numberStr.delegate = self
-        Tanni.delegate = self
-        // Do any additional setup after loading the view, typically from a nib
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        numberStr.delegate = self
+//        Tanni.delegate = self
+//        // Do any additional setup after loading the view, typically from a nib
+//    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -63,21 +65,46 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         return false
     }
     
-    //OK1のアクション
     @IBAction func OK1(sender: AnyObject) {
-    
-        //OKボタンで保存
-        // データ保存
-       let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(Tanni.text, forKey: "saveTanni")
-        userDefaults.setObject(kigen.text, forKey: "savekigen")
-        userDefaults.setObject(numberStr.text, forKey: "numberStr")
+        // AppDelegateのインスタンスを取得
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        // appDelegateの変数を操作
+        ++appDelegate.number
+        // ラベル表示,ラベル用にString型へ変換
+        let tmpNumber: Int = appDelegate.number
+        //firstViewLabel.text = "[\(String(tmpPoint))]"
         
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.numberStr = "numberStr"
-        appDelegate.kigen = "kigen"
-
+        //単位の保存
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(Tanni.text, forKey: "saveTanni")
     }
+
+    override func viewDidAppear(animated: Bool) {
+        // AppDelegateのインスタンスを取得
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.Tanni = "saveTanni"
+        //firstViewLabel.text = "[\(String(tmpPoint))]"
+        
+        
+    }
+    
+    
+    
+//    //OK1のアクション
+//    @IBAction func OK1(sender: AnyObject) {
+//    
+//        //OKボタンで保存
+//        // データ保存
+//       let userDefaults = NSUserDefaults.standardUserDefaults()
+//        userDefaults.setObject(Tanni.text, forKey: "saveTanni")
+//        userDefaults.setObject(kigen.text, forKey: "savekigen")
+//        userDefaults.setObject(numberStr.text, forKey: "numberStr")
+//        
+//        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        appDelegate.numberStr = "numberStr"
+//        //appDelegate.kigen = "kigen"
+
+//    }
 }
 
 
