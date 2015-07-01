@@ -55,7 +55,7 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
                 y = x2 - x1
                     
             }else if x1 > x2 {
-                //　目標数値＞現在の数値
+                //　目標数値＞現在の数値4
                 y = x1 - x2
             }
                 

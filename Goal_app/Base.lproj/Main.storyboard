@@ -100,7 +100,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Tanni_3" destination="SEH-oo-f3Y" id="C0J-44-KjO"/>
-                        <outlet property="todayNumberStr" destination="usi-ET-b9M" id="Snz-Pg-DgP"/>
+                        <outlet property="todayNumberStr" destination="usi-ET-b9M" id="ewx-i4-obE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO4-Bq-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,7 +148,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Settei" destination="9mu-EH-Sjl" id="d9Z-Rh-ZyV"/>
+                        <outlet property="Settei" destination="9mu-EH-Sjl" id="Qpy-Uj-OWS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sM3-WL-FP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,10 +225,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Tanni" destination="14H-tU-Xca" id="tr9-Ny-yKb"/>
+                        <outlet property="Tanni" destination="14H-tU-Xca" id="J9a-cr-rQX"/>
                         <outlet property="datePicker1" destination="x0z-uK-l7F" id="ZoI-Lm-KrZ"/>
                         <outlet property="kigen" destination="Dea-j4-aLg" id="8s8-Bq-JKA"/>
-                        <outlet property="numberStr" destination="doN-W3-Hzl" id="u7d-FF-WDi"/>
+                        <outlet property="numberStr" destination="doN-W3-Hzl" id="ERw-dn-wiZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ki-y4-0ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,6 +366,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ResultImage" destination="YNh-8p-dBe" id="Dvs-hJ-hos"/>
+                        <outlet property="ResultLabel" destination="0Te-y6-7W1" id="0gR-iR-XT1"/>
+                        <outlet property="TextMessege" destination="EWG-i0-Nw2" id="Zbt-ga-T1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRx-id-Dgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,7 +397,7 @@
         <image name="today_nyuuyroku.png" width="400" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aDT-XM-2Cs"/>
+        <segue reference="S4J-On-AiC"/>
         <segue reference="cDs-q1-F3n"/>
     </inferredMetricsTieBreakers>
 </document>

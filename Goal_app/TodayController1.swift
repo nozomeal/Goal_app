@@ -33,6 +33,15 @@ class TodayController1: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    // selfをデリゲートにしているので、ここにデリゲートメソッドを書く
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    
     //TodayNumberのアウトレット
     @IBOutlet weak var todayNumberStr: UITextField!
     

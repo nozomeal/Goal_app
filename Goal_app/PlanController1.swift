@@ -26,7 +26,8 @@ class PlanController1: UIViewController ,UIApplicationDelegate{
     }
     
     
-    //OK3ボタン
+   
+        //OK3ボタン
     @IBAction func OK3(sender: AnyObject) {
         
         

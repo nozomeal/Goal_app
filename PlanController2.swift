@@ -46,13 +46,6 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     @IBOutlet weak var Tanni: UITextField!
     
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,8 +57,11 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         super.didReceiveMemoryWarning()
     }
     
-    
-
+    // selfをデリゲートにしているので、ここにデリゲートメソッドを書く
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     //OK1のアクション
     @IBAction func OK1(sender: AnyObject) {

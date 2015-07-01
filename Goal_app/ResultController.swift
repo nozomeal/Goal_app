@@ -25,6 +25,10 @@ class ResultController: UIViewController,UIApplicationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // データ読み込み受け手
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        var loadText9: String! = userDefaults.stringForKey("saveSettei")
+        ResultLabel.text = loadText9
         
         //データの受け渡し受け手
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
