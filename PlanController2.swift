@@ -10,31 +10,6 @@ import Foundation
 import UIKit
 
 class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelegate {
-
-    
-    //日付のアウトレット
-    @IBOutlet var kigen: UILabel!
-    //pickerviewのアウトレット
-    @IBOutlet var datePicker1: UIDatePicker!
-    
-    @IBAction func changed(sender: UIDatePicker) {
-        kigen.text = format(datePicker1.date,style: "yyyy年,MM月dd日")
-        
-    }
-    
-    // 書式指定に従って日付を文字列に変換します
-    //  date : 日付データ(NSDate型)を指定します
-    //  style : 書式を指定します
-    //          yyyy 西暦,MM 月,dd 日
-    func format(kigen : NSDate, style : String) -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
-        dateFormatter.dateFormat = style
-        return  dateFormatter.stringFromDate(kigen)
-
-
-    }
-    
     
     //textfeild の設定
     private var myTextField: UITextField!
@@ -45,6 +20,8 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     //Tanni(textfield)のアウトレット
     @IBOutlet weak var Tanni: UITextField!
     
+    //期限のアウトレット
+    @IBOutlet weak var nissu: UITextField!
     
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -57,13 +34,16 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        numberStr.delegate = self
+        nissu.delegate = self
     }
     
     // selfをデリゲートにしているので、ここにデリゲートメソッドを書く
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(numberStr: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
+    
     
     @IBAction func OK1(sender: AnyObject) {
         // AppDelegateのインスタンスを取得
@@ -72,8 +52,7 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         ++appDelegate.number
         // ラベル表示,ラベル用にString型へ変換
         let tmpNumber: Int = appDelegate.number
-        //firstViewLabel.text = "[\(String(tmpPoint))]"
-        
+        let tmpNissu: Int = appDelegate.nissu
         //単位の保存
         let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setObject(Tanni.text, forKey: "saveTanni")
@@ -87,24 +66,6 @@ class PlanController2: UIViewController, UITextFieldDelegate,UIApplicationDelega
         
         
     }
-    
-    
-    
-//    //OK1のアクション
-//    @IBAction func OK1(sender: AnyObject) {
-//    
-//        //OKボタンで保存
-//        // データ保存
-//       let userDefaults = NSUserDefaults.standardUserDefaults()
-//        userDefaults.setObject(Tanni.text, forKey: "saveTanni")
-//        userDefaults.setObject(kigen.text, forKey: "savekigen")
-//        userDefaults.setObject(numberStr.text, forKey: "numberStr")
-//        
-//        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        appDelegate.numberStr = "numberStr"
-//        //appDelegate.kigen = "kigen"
-
-//    }
 }
 
 

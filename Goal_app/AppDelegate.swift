@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var Nokori:String!
     var number: Int = 0
     var Tanni:String!
+    var nissu: Int = 0
+    var y: Int = 0
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

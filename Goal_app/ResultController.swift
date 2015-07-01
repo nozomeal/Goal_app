@@ -31,34 +31,48 @@ class ResultController: UIViewController,UIApplicationDelegate {
         ResultLabel.text = loadText9
         
         //データの受け渡し受け手
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        var Toutatu = appDelegate.Toutatu
-        var Nokori = appDelegate.Nokori
+        
     }
+    
+    
+    @IBAction func ok4(sender: AnyObject) {
+        // AppDelegateのインスタンスを取得
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        // appDelegateの変数を操作
+        ++appDelegate.nissu
+        ++appDelegate.y
+        // ラベル表示,ラベル用にString型へ変換
+        let tmpNissu: Int = appDelegate.nissu
+        let tmpy: Int = appDelegate.y
+        //secondViewLabel.text = "[\(String(tmpNisuu)]"
+    }
+    override func viewDidAppear(animated: Bool) {
+        // AppDelegateのインスタンスを取得
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        // ラベル表示,ラベル用にString型へ変換
+        let tmpNissu: Int = appDelegate.nissu
+        let tmpy: Int = appDelegate.y
+        //secondViewLabel.text = "[\(String(tmpPoint))]"
         
         
-//        if  Toutatu != nil && Nokori != nil {
-//        if var t1 = Toutatu.toInt(){
-//            if var n1 = Nokori.toInt(){
-//        if t1 <= 0 {
-//            TextMessege.text = String("目標を達成しました！次の目標をたてましょう！")
-//            ResultImage.image = ResultPic1
-//        } else if t1 > 0 {
-//            TextMessege.text = String("明日も頑張りましょう！")
-//            ResultImage.image = ResultPic0
-//        }else if n1 == 0 {
-//            TextMessege.text = String("目標達成ならず、、、もう一度目標を設定しましょう。")
-//            ResultImage.image = ResultPic2
-//        }
-//            }
+        if  tmpNissu <= 0 {
+            TextMessege.text = String("目標を達成しました！次の目標をたてましょう！")
+            ResultImage.image = ResultPic1
+        } else if tmpNissu > 0 {
+            TextMessege.text = String("明日も頑張りましょう！")
+            ResultImage.image = ResultPic0
+        }else if tmpy == 0 {
+            TextMessege.text = String("目標達成ならず、、、もう一度目標を設定しましょう。")
+            ResultImage.image = ResultPic2
             }
+        }
 
 
     
-//     override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//        
-//    }
-//}
+      override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+        
+    }
+}
 

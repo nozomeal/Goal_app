@@ -53,17 +53,17 @@ class TodayController1: UIViewController {
         // AppDelegateのインスタンスを取得
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         // appDelegateの変数を操作
-        ++appDelegate.number
+        ++appDelegate.todayNumber
         // ラベル表示,ラベル用にString型へ変換
         let tmpTodayNumber: Int = appDelegate.todayNumber
-        //textfield.text = "[\(String(tmpNumber))]"
     }
+    
+    
     override func viewDidAppear(animated: Bool) {
         // AppDelegateのインスタンスを取得
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         // ラベル表示,ラベル用にString型へ変換
         let tmpTodayNumber: Int = appDelegate.todayNumber
-        //firstViewLabel.text = "[\(String(tmpPoint))]"
     }
     
     

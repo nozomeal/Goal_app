@@ -176,9 +176,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tanni.png" translatesAutoresizingMaskIntoConstraints="NO" id="AqS-Jv-uls">
                                 <rect key="frame" x="-24" y="161" width="187" height="150"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kijitu.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vvx-JU-APD">
-                                <rect key="frame" x="-14" y="305" width="191" height="149"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doN-W3-Hzl" userLabel="number">
                                 <rect key="frame" x="73" y="147" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -189,27 +186,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-j4-aLg" userLabel="Data">
-                                <rect key="frame" x="73" y="379" width="210" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="DataPicker1" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-uK-l7F" userLabel="DatePicker1">
-                                <rect key="frame" x="73" y="403" width="253" height="136"/>
-                                <date key="date" timeIntervalSinceReferenceDate="456391853.77502698">
-                                    <!--2015-06-19 07:30:53 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
-                                    <!--2015-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="3155626800">
-                                    <!--2100-12-31 11:00:00 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="changed:" destination="TmB-T4-KJc" eventType="valueChanged" id="AGp-Un-anu"/>
-                                </connections>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvM-6l-9lu" userLabel=" OK1">
                                 <rect key="frame" x="259" y="533" width="100" height="100"/>
                                 <state key="normal" image="OK_botton.png">
@@ -220,15 +196,28 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="aDT-XM-2Cs"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nannnitigo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3AG-cU-ktV">
+                                <rect key="frame" x="22" y="323" width="94" height="67"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YHB-un-2S9">
+                                <rect key="frame" x="78" y="398" width="122" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日後" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtP-h9-mDL">
+                                <rect key="frame" x="203" y="431" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Tanni" destination="14H-tU-Xca" id="J9a-cr-rQX"/>
-                        <outlet property="datePicker1" destination="x0z-uK-l7F" id="ZoI-Lm-KrZ"/>
-                        <outlet property="kigen" destination="Dea-j4-aLg" id="8s8-Bq-JKA"/>
-                        <outlet property="numberStr" destination="doN-W3-Hzl" id="ERw-dn-wiZ"/>
+                        <outlet property="nissu" destination="YHB-un-2S9" id="j0E-BC-cOV"/>
+                        <outlet property="numberStr" destination="doN-W3-Hzl" id="YSv-GZ-nPE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ki-y4-0ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,8 +310,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Daily" destination="to6-WZ-GsO" id="BEA-yF-m7g"/>
-                        <outlet property="Nokori" destination="vfm-sl-OOQ" id="upW-no-u9v"/>
+                        <outlet property="Daily" destination="to6-WZ-GsO" id="QWN-b8-5xy"/>
+                        <outlet property="Nokori" destination="vfm-sl-OOQ" id="K5z-k9-CSq"/>
                         <outlet property="Tanni_1" destination="Ls3-3o-nmM" id="4di-5Z-jBB"/>
                         <outlet property="Tanni_2" destination="HJ0-cM-pPE" id="1Gn-Os-iTM"/>
                         <outlet property="Toutatu" destination="EJo-FX-q38" id="Dr3-UE-iZE"/>
@@ -397,15 +386,15 @@
         <image name="change.png" width="400" height="300"/>
         <image name="first_top.png" width="1242" height="2208"/>
         <image name="hiniti.png" width="200" height="150"/>
-        <image name="kijitu.png" width="400" height="300"/>
         <image name="mokuhyoutoutatu.png" width="200" height="150"/>
+        <image name="nannnitigo.png" width="300" height="200"/>
         <image name="suuti.png" width="400" height="300"/>
         <image name="tanni.png" width="400" height="300"/>
         <image name="tebiki.png" width="400" height="300"/>
         <image name="today_nyuuyroku.png" width="400" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S4J-On-AiC"/>
+        <segue reference="aDT-XM-2Cs"/>
         <segue reference="cDs-q1-F3n"/>
     </inferredMetricsTieBreakers>
 </document>

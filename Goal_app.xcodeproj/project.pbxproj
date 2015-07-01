@@ -49,6 +49,7 @@
 		23C9CA131B394235006BD465 /* tebiki.png in Resources */ = {isa = PBXBuildFile; fileRef = 23C9CA121B394235006BD465 /* tebiki.png */; };
 		23D9F7EE1B424B9B0011A536 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F7ED1B424B9B0011A536 /* ResultController.swift */; };
 		23D9F7F01B4254BB0011A536 /* TodayController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F7EF1B4254BB0011A536 /* TodayController1.swift */; };
+		23DD0B0B1B4446750063F944 /* nannnitigo.png in Resources */ = {isa = PBXBuildFile; fileRef = 23DD0B0A1B4446750063F944 /* nannnitigo.png */; };
 		23E3C1601B412CD2004B533B /* clear1.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E3C15F1B412CD2004B533B /* clear1.png */; };
 		23E3C1621B412CF7004B533B /* ganba.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E3C1611B412CF7004B533B /* ganba.png */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		23C9CA121B394235006BD465 /* tebiki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tebiki.png; sourceTree = "<group>"; };
 		23D9F7ED1B424B9B0011A536 /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		23D9F7EF1B4254BB0011A536 /* TodayController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayController1.swift; sourceTree = "<group>"; };
+		23DD0B0A1B4446750063F944 /* nannnitigo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nannnitigo.png; sourceTree = "<group>"; };
 		23E3C15F1B412CD2004B533B /* clear1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear1.png; sourceTree = "<group>"; };
 		23E3C1611B412CF7004B533B /* ganba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ganba.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 		23537EBF1B312E2600099A37 /* Goal_app */ = {
 			isa = PBXGroup;
 			children = (
+				23DD0B0A1B4446750063F944 /* nannnitigo.png */,
 				23E3C1611B412CF7004B533B /* ganba.png */,
 				23E3C15F1B412CD2004B533B /* clear1.png */,
 				23C9CA121B394235006BD465 /* tebiki.png */,
@@ -308,6 +311,7 @@
 			files = (
 				23537EF71B32C37C00099A37 /* tanni.png in Resources */,
 				23537F091B33D26000099A37 /* PLAN_back1.png in Resources */,
+				23DD0B0B1B4446750063F944 /* nannnitigo.png in Resources */,
 				23C9CA131B394235006BD465 /* tebiki.png in Resources */,
 				23537EFF1B32C98600099A37 /* mokuhyoumade.png in Resources */,
 				23537EFB1B32C75F00099A37 /* today_nyuuyroku.png in Resources */,

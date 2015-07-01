@@ -39,15 +39,6 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         Tanni_2.text = loadText3
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-//        // AppDelegateのインスタンスを取得
-//        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        // ディスクから読み出し
-//        let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-//        let Number: Int? = number.integerForKey("number")
-//        // アンラッピング
-//        let Number: Int = number
-        
     }
     
     
@@ -60,33 +51,30 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         // appDelegateの変数を操作
         ++appDelegate.number
         ++appDelegate.todayNumber
+        ++appDelegate.nissu
         // ラベル表示,ラベル用にString型へ変換
         let tmpNumber: Int = appDelegate.number
         let tmpTodayNumber: Int = appDelegate.todayNumber
+        let tmpNissu: Int = appDelegate.nissu
+        
+
         //secondViewLabel.text = "[\(String(tmpPoint))]"
-    }
     
-    override func viewDidAppear(animated: Bool) {
+    
+     func viewDidAppear(animated: Bool) {
         // AppDelegateのインスタンスを取得
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         // ラベル表示,ラベル用にString型へ変換
         let tmpNumber: Int = appDelegate.number
         let tmpTodayNumber: Int = appDelegate.todayNumber
-        //secondViewLabel.text = "[\(String(tmpPoint))]"
-        
-        
+        let tmpNissu: Int = appDelegate.nissu
+        Nokori.text = "\(String(tmpNissu))"
         
         
         //到達（y）
-                var y: Int = 0
-                //期日ー今日＝残りの日数
-                var z: Int = 0
+            var y: Int = 0
         
-        
-                //到達までの残りの数値の計算
-                //if  tmpNumber != nil && tmpTodayNumber != nil {
-        
-//                                        //到達（y）
+                //到達（y）
                     if tmpNumber > tmpTodayNumber {
                         // 目標数値＜現在の数値
                         y = tmpNumber - tmpTodayNumber
@@ -99,40 +87,16 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
                         //到達ラベルに表示
                         Toutatu.text = String(y)
                     }
-                //}
         
-                //残りの日数
-                let nowDate = NSDate() // 現在日時の取得
+        let tmpy: Int = appDelegate.y
         
-//                // NSData to String
-//                let kigen = appDelegate.kigen
-//        
-//                //目標期限を取得するようにする
-//        
-//                let dateFormatter = NSDateFormatter()
-//                dateFormatter.dateFormat = "yyyy/MM/dd"
-//                let kigenDate:NSDate? = dateFormatter.dateFromString(kigen!)
-//                let cal = NSCalendar.currentCalendar()
-//        
-//                if  kigen != nil && kigenDate != nil{
-//                let calUnit:NSCalendarUnit = .CalendarUnitDay | .CalendarUnitYear
-//                let components = cal.components(calUnit, fromDate: nowDate, toDate: kigenDate!, options: nil)
-//        
-//                z = components.day + components.year * 365
-//                Nokori.text = String(z)
-//                
-    
-                
-//                //１日あたり
-//                var daily: Int = 0
-//                
-//                daily = y / z
-//                Daily.text = String (daily)
-//                    }
-
+    //1日あたり（n）
+            var n: Int = 0
     
     
     
+    
+    }
     
     
     
@@ -212,7 +176,6 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
 //        // labelに表示
 //        Tanni_1.text = loadText2
 //        Tanni_2.text = loadText3
-    }
     
 //     override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
@@ -230,5 +193,5 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
 //        userDefaults.setObject(Toutatu.text, forKey: "saveToutatu")
 //        userDefaults.setObject(Nokori.text, forKey: "saveNokori")
 //    }
-
+}
 
