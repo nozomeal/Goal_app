@@ -10,7 +10,8 @@ import UIKit
 import Foundation
 
 class TodayController1: UIViewController {
-    
+    // AppDelegateのインスタンスを取得
+    let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     // Tanni_3のアウトレット
     @IBOutlet weak var Tanni_3: UILabel!
@@ -44,28 +45,37 @@ class TodayController1: UIViewController {
     
     //TodayNumberのアウトレット
     @IBOutlet weak var todayNumber: UITextField!
-     //selfをデリゲートにしているので、ここにデリゲートメソッドを書く
-        func textFieldShouldReturn(textField: UITextField!) -> Bool {
-            self.view.endEditing(true)
-            return false
-        }
+//     //selfをデリゲートにしているので、ここにデリゲートメソッドを書く
+//        func textFieldShouldReturn(textField: UITextField!) -> Bool {
+//            self.view.endEditing(true)
+//            return false
+    
+    
     @IBAction func OK(sender: AnyObject) {
-        // AppDelegateのインスタンスを取得
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        // appDelegateの変数を操作
-        ++appDelegate.todayNumber
-        // ラベル表示,ラベル用にString型へ変換
-        let tmpTodayNumber: Int = appDelegate.todayNumber
+        
+        
+        var x2 = todayNumber.text.toInt()!
+        appDelegate.todayNumber = x2
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(todayNumber.text, forKey: "savetodayNumber")
+        
+        
+//        // appDelegateの変数を操作
+//        ++appDelegate.todayNumber
+//        // ラベル表示,ラベル用にString型へ変換
+//        let tmpTodayNumber: Int = appDelegate.todayNumber
     }
+}
     
-    
-    override func viewDidAppear(animated: Bool) {
-        // AppDelegateのインスタンスを取得
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        // ラベル表示,ラベル用にString型へ変換
-        let tmpTodayNumber: Int = appDelegate.todayNumber
-    }
-    
+//    
+//    override func viewDidAppear(animated: Bool) {
+//        // AppDelegateのインスタンスを取得
+//        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        // ラベル表示,ラベル用にString型へ変換
+//        let tmpTodayNumber: Int = appDelegate.todayNumber
+//    }
+//    
     
     
     
@@ -84,10 +94,10 @@ class TodayController1: UIViewController {
 //        
 //        // OK2ボタンのアクション
 //        // データ保存処理
-//        // NSUserDefaultsインスタンスの生成
+        // NSUserDefaultsインスタンスの生成
 //        let userDefaults = NSUserDefaults.standardUserDefaults()
-//        userDefaults.setObject(todayNumberStr.text, forKey: "savetodayNumberStr")
+//        userDefaults.setObject(todayNumber.text, forKey: "savetodayNumber")
 //        
 //    }
-   
-}
+//   
+

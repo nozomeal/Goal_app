@@ -11,7 +11,8 @@ import UIKit
 
 class TodayController2: UIViewController ,UIApplicationDelegate  {
     
-    
+    // AppDelegateのインスタンスを取得
+    let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     // 1日あたりのアウトレット
     @IBOutlet weak var Daily: UILabel!
@@ -24,6 +25,8 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
     //残りの日数のアウトレット
     @IBOutlet weak var Nokori: UILabel!
 
+    
+    var z:Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,64 +42,96 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
         Tanni_2.text = loadText3
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        var x1 = appDelegate.number
+        var x2 = appDelegate.todayNumber
+        var n = appDelegate.nissu
+        var y: Int = 0
+        
+        
+        if x1 > x2 {
+             var y = x1 - x2
+            Toutatu.text = String(y)
+            var z = y / n
+            Daily.text = String(z)
+            appDelegate.Toutatu = y
+        }else {
+             var y = x2 - x1
+            Toutatu.text = String(y)
+            var z = y / n
+            Daily.text = String(z)
+            appDelegate.Toutatu = y
+        }
+        
+        //Toutatu.text = String(y)
+        Nokori.text = String(n)
+//        appDelegate.Toutatu = y
+//        var z: Int = 0
+         //var z = y / n
+//        Daily.text = String(z)
+        
+        
     }
     
     
     
     
     
-    @IBAction func load(sender: AnyObject) {
-        // AppDelegateのインスタンスを取得
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        // appDelegateの変数を操作
-        ++appDelegate.number
-        ++appDelegate.todayNumber
-        ++appDelegate.nissu
-        // ラベル表示,ラベル用にString型へ変換
-        let tmpNumber: Int = appDelegate.number
-        let tmpTodayNumber: Int = appDelegate.todayNumber
-        let tmpNissu: Int = appDelegate.nissu
+    @IBAction func OK5(sender: AnyObject) {
+
+        //appDelegate.Toutatu = y
         
+        // データ保存
+                let userDefaults = NSUserDefaults.standardUserDefaults()
+                userDefaults.setObject(Toutatu.text, forKey: "saveToutatu")
+        
+    
+    
+    }
+}
+//        // AppDelegateのインスタンスを取得
+//        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        // appDelegateの変数を操作
+//        ++appDelegate.number
+//        ++appDelegate.todayNumber
+//        ++appDelegate.nissu
+//        // ラベル表示,ラベル用にString型へ変換
+//        let tmpNumber: Int = appDelegate.number
+//        let tmpTodayNumber: Int = appDelegate.todayNumber
+//        let tmpNissu: Int = appDelegate.nissu
+//        
 
         //secondViewLabel.text = "[\(String(tmpPoint))]"
     
     
-     func viewDidAppear(animated: Bool) {
-        // AppDelegateのインスタンスを取得
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        // ラベル表示,ラベル用にString型へ変換
-        let tmpNumber: Int = appDelegate.number
-        let tmpTodayNumber: Int = appDelegate.todayNumber
-        let tmpNissu: Int = appDelegate.nissu
-        Nokori.text = "\(String(tmpNissu))"
+//     func viewDidAppear(animated: Bool) {
+//        // AppDelegateのインスタンスを取得
+//        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        // ラベル表示,ラベル用にString型へ変換
+//        let tmpNumber: Int = appDelegate.number
+//        let tmpTodayNumber: Int = appDelegate.todayNumber
+//        let tmpNissu: Int = appDelegate.nissu
+//        Nokori.text = "\(String(tmpNissu))"
         
         
-        //到達（y）
-            var y: Int = 0
-        
-                //到達（y）
-                    if tmpNumber > tmpTodayNumber {
-                        // 目標数値＜現在の数値
-                        y = tmpNumber - tmpTodayNumber
-        
-                    }else if tmpNumber < tmpTodayNumber {
-                        //　目標数値＞現在の数値4
-                        y = tmpTodayNumber - tmpNumber
-                    }
-        
-                        //到達ラベルに表示
-                        Toutatu.text = String(y)
-                    }
-        
-        let tmpy: Int = appDelegate.y
-        
-    //1日あたり（n）
-            var n: Int = 0
-    
-    
-    
-    
-    }
+//        //到達（y）
+//            var y: Int = 0
+//        
+//                //到達（y）
+//                    if tmpNumber > tmpTodayNumber {
+//                        // 目標数値＜現在の数値
+//                        y = tmpNumber - tmpTodayNumber
+//        
+//                    }else if tmpNumber < tmpTodayNumber {
+//                        //　目標数値＞現在の数値4
+//                        y = tmpTodayNumber - tmpNumber
+//                    }
+//        
+//                        //到達ラベルに表示
+//                        Toutatu.text = String(y)
+//                    }
+//      let tmpy: Int = appDelegate.y
+
     
     
     
@@ -193,5 +228,5 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
 //        userDefaults.setObject(Toutatu.text, forKey: "saveToutatu")
 //        userDefaults.setObject(Nokori.text, forKey: "saveNokori")
 //    }
-}
+
 
