@@ -330,7 +330,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Te-y6-7W1">
                                 <rect key="frame" x="16" y="20" width="343" height="69"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.79442967031619161" green="0.45315313146376279" blue="0.9881431502525253" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.77680278120000001" green="0.52509433220000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -389,6 +389,6 @@
         <image name="today_nyuuyroku.png" width="400" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aDT-XM-2Cs"/>
+        <segue reference="S4J-On-AiC"/>
     </inferredMetricsTieBreakers>
 </document>

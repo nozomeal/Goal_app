@@ -55,7 +55,7 @@ class TodayController2: UIViewController ,UIApplicationDelegate  {
             var z = y / n
             Daily.text = String(z)
             appDelegate.Toutatu = y
-        }else {
+        }else if x1 < x2 {
              var y = x2 - x1
             Toutatu.text = String(y)
             var z = y / n
